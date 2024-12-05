@@ -7,20 +7,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] flex justify-center items-center flex-col [font-family:'Montserrat',sans-serif] h-screen [margin:-20px_0_50px]">
-    <div class="container bg-white rounded-[10px] [box-shadow:0_14px_28px_rgba(0,0,0,0.25),0_10px_10px_rgba(0,0,0,0.22)] relative overflow-hidden w-[768px] max-w-full min-h-[480px]" id="container">
-        <!-- Sign Up Container -->
-        <div class="form-container absolute top-0 h-full [transition:all_0.6s_ease-in-out] sign-up-container left-0 w-1/2 opacity-0 z-[1]">
-            <form id="signupForm" class="bg-white flex items-center justify-center flex-col [padding:0_50px] h-full text-center" action="#">
-                <h1 class="font-bold m-0">Create Account</h1>
+<body class="bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] flex lg:justify-center items-center flex-col [font-family:'Montserrat',sans-serif] h-screen md:overflow-hidden">
+    <h1 id="titlesm" class="md:hidden mt-16 font-bold m-0 [font-family:'Montserrat',sans-serif]">Hello, Friends!</h1>
+    <img src="/src/assets/Ruang Belajar.png" class="lg:hidden mt-4 md:mt-10 w-32 mb-6" alt="">
+    <div class="container bg-white rounded-lg [box-shadow:0_14px_28px_rgba(0,0,0,0.25),0_10px_10px_rgba(0,0,0,0.22)] w-full h-full sm:h-[50%] lg:w-[768px] md:w-[60%] max-w-full mx-auto relative min-h-[480px] flex flex-col lg:flex-row" id="container">
+        <!-- Sign In Form -->
+        <div id="signinForm" class="top-0 h-full [transition:all_0.6s_ease-in-out] form-container lg:absolute sign-in-container left-0 lg:w-1/2 z-[2]">
+            <form class="rounded-lg bg-white flex items-center justify-center flex-col px-[50px] h-full text-center">
+                <h1 class="font-bold m-0">Sign in</h1>
                 <div class="social-container [margin:20px_0]">
-                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:0_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none] [margin:15px_0]">
+                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:15px_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none]">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:0_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none] [margin:15px_0]">
+                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:15px_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none]">
                         <i class="fab fa-google-plus-g"></i>
                     </a>
-                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:0_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none] [margin:15px_0]">
+                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:15px_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none]">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <span class="text-xs">or use your account</span>
+                <input id="email2" class="bg-[#eee] [border:none] [padding:12px_15px] [margin:8px_0] w-full" type="email" placeholder="Email">
+                <input id="password2" class="bg-[#eee] [border:none] [padding:12px_15px] [margin:8px_0] w-full" type="password" placeholder="Password">
+                <a class="text-[#333] text-sm [text-decoration:none] my-[15px]" href="#">Forgot your password?</a>
+                <button type="submit" class="rounded-[20px] border-[1px] border-solid border-[#fbc2eb] bg-[#fbc2eb] text-white text-xs font-bold [padding:12px_45px] tracking-[1px] uppercase [transition:transform_80ms_ease-in]
+                                    active:scale-[0.95]
+                                    focus:[outline:none]">Sign In</button>
+                <a onclick="showSignUp()" class="lg:hidden text-[#333] text-sm underline my-[15px]" href="#">Create Account</a>
+            </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signupForm" class="form-container top-0 h-full [transition:all_0.6s_ease-in-out] sign-up-container left-0 lg:w-1/2 sm:hidden lg:block w-full absolute lg:opacity-0 z-[1]">
+            <form class="rounded-lg bg-white flex items-center justify-center flex-col px-[50px] h-full text-center">
+                <h1 class="font-bold m-0">Create Account</h1>
+                <div class="social-container [margin:20px_0]">
+                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:15px_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none]">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:15px_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none]">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:15px_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none]">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
@@ -31,34 +59,12 @@
                 <button type="submit" class="rounded-[20px] border-[1px] border-solid border-[#a6c1ee] bg-[#a6c1ee] text-white text-xs font-bold [padding:12px_45px] tracking-[1px] uppercase [transition:transform_80ms_ease-in]
                                     active:scale-[0.95]
                                     focus:[outline:none]">Sign Up</button>
+                <a onclick="showSignIn()" class="lg:hidden text-[#333] text-sm underline my-[15px]" href="#">Back to Login</a>
             </form>
         </div>
-        <!-- Sign In Container -->
-        <div class="form-container absolute top-0 h-full [transition:all_0.6s_ease-in-out] sign-in-container left-0 w-1/2 z-[2]">
-            <form id="signinForm" class="bg-white flex items-center justify-center flex-col [padding:0_50px] h-full text-center" action="#">
-                <h1 class="font-bold m-0">Sign in</h1>
-                <div class="social-container [margin:20px_0]">
-                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:0_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none] [margin:15px_0]">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:0_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none] [margin:15px_0]">
-                        <i class="fab fa-google-plus-g"></i>
-                    </a>
-                    <a href="#" class="border-[1px] border-solid border-[#dddddd] rounded-[50%] inline-flex justify-center items-center [margin:0_5px] h-[40px] w-[40px] text-[#333] text-sm [text-decoration:none] [margin:15px_0]">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-                <span class="text-xs">or use your account</span>
-                <input id="email2" class="bg-[#eee] [border:none] [padding:12px_15px] [margin:8px_0] w-full" type="email" placeholder="Email">
-                <input id="password2" class="bg-[#eee] [border:none] [padding:12px_15px] [margin:8px_0] w-full" type="password" placeholder="Password">
-                <a class="text-[#333] text-sm [text-decoration:none] [margin:15px_0]" href="#">Forgot your password?</a>
-                <button type="submit" class="rounded-[20px] border-[1px] border-solid border-[#fbc2eb] bg-[#fbc2eb] text-white text-xs font-bold [padding:12px_45px] tracking-[1px] uppercase [transition:transform_80ms_ease-in]
-                                    active:scale-[0.95]
-                                    focus:[outline:none]">Sign In</button>
-            </form>
-        </div>
+        
         <!-- Overlay -->
-        <div class="overlay-container absolute top-0 left-1/2 w-1/2 h-full overflow-hidden [transition:transform_0.6s_ease-in-out] z-[100]">
+        <div class="overlay-container absolute top-0 left-1/2 w-1/2 h-full overflow-hidden [transition:transform_0.6s_ease-in-out] z-[-1] lg:z-[100]">
             <div class="overlay bg-[#ff416c] bg-gradient-to-r from-[#fbc2eb] to-[#a6c1ee] bg-no-repeat bg-cover [background-position:0_0] text-white relative left-[-100%] h-full w-[200%] translate-x-[0] [transition:transform_0.6s_ease-in-out]">
                 <div class="overlay-panel absolute flex items-center justify-center flex-col [padding:0_40px] text-center top-0 h-full w-1/2 [transition:transform_0.6s_ease-in-out] overlay-left translate-x-[-20%]">
                     <h1 class="font-bold m-0">Welcome Back!</h1>
@@ -70,7 +76,7 @@
                                     focus:[outline:none]" id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel absolute flex items-center justify-center flex-col [padding:0_40px] text-center top-0 h-full w-1/2 translate-x-[0] [transition:transform_0.6s_ease-in-out] overlay-right right-0">
-                    <h1 class="font-bold m-0">Hello, Friend!</h1>
+                    <h1 class="font-bold m-0">Hello, Friends!</h1>
                     <p class="text-xs font-sm leading-5 trackig-[0.5px] [margin:20px_0_30px]">
                         Enter your personal details and start journey with us
                     </p>
@@ -81,7 +87,13 @@
             </div>
         </div>
     </div>
+    
+    
+    
     <style>
+        .hidden {
+            display: none;
+        }
         @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
         * {
             box-sizing: border-box;
@@ -121,6 +133,6 @@
             transform: translateX(20%);
         }
     </style>
-    <script src="script.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
