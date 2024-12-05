@@ -1,50 +1,33 @@
-// --- INDEX HTML ---
-const navLinks = document.querySelector(".nav-links");
-    function onToggleMenu(e) {
-        e.name = e.name === "menu" ? "close" : "menu";
-        navLinks.classList.toggle("top-[9%]");
-    }
+// Fungsi untuk toggle menu burger
+function burger() {
+  const burgerIcon = document.getElementById("burgerIcon");
+  const burgerOpen = burgerIcon.name === "menu";  
+  burgerIcon.name = burgerOpen ? "close" : "menu";
+  navLinks.classList.toggle("hidden");
+}
 
-// --- LOGIN HTML ---
-const signinForm = document.getElementById("signinForm");
-    signinForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        const email = document.getElementById("email2").value;
-        const password = document.getElementById("password2").value;
+// Menutup menu jika klik di luar area burger atau menu
+document.addEventListener("click", (event) => {
+  const clikMenu = navLinks.contains(event.target);
+  const clickBurger = burgerIcon.contains(event.target);
 
-        if (email && password) {
-            alert("Login berhasil! Anda akan diarahkan ke halaman utama.");
-            window.location.href = "dashboard.html";
-        } else {
-            // alert("Silakan masukkan Email dan Password.");
-            window.location.href = "dashboard.html";
-        }
-    });
-
-const signupForm = document.getElementById("signupForm");
-    signupForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-
-        if (name && email && password) {
-            alert("Login berhasil! Anda akan diarahkan ke halaman utama.");
-            window.location.href = "dashboard.html";
-        } else {
-            // alert("Silakan masukkan Nama, Email, dan Password.");
-            window.location.href = "dashboard.html";
-        }
-    });
-
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-    container.classList.add('right-panel-active');
+  if (!clikMenu && !clickBurger && burgerIcon.name === "close") {
+    burgerIcon.name = "menu";
+    navLinks.classList.toggle("hidden");
+  }
 });
 
-signInButton.addEventListener('click', () => {
-    container.classList.remove('right-panel-active');
+// Dropdown menu "Tingkat"
+function tingkat() {
+  const dropTingkat = document.getElementById("dropTingkat");
+  dropTingkat.classList.toggle("hidden");
+}
+
+// Menutup dropdown jika pengguna klik di luar elemen
+window.addEventListener("click", function (event) {
+  const dropdown = document.getElementById("dropTingkat");
+  const tingkatButton = document.querySelector('li[onclick="tingkat()"]');
+  if (!dropdown.contains(event.target) && !tingkatButton.contains(event.target)) {
+    dropdown.classList.add("hidden");
+  }
 });
