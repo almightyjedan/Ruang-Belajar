@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="output.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] flex lg:justify-center items-center flex-col [font-family:'Montserrat',sans-serif] h-screen md:overflow-hidden">
-    <h1 id="titlesm" class="md:hidden mt-16 font-bold m-0 [font-family:'Montserrat',sans-serif]">Hello, Friends!</h1>
+<body class="bg-[#577180] text-black flex lg:justify-center items-center flex-col [font-family:'Montserrat',sans-serif] h-screen md:overflow-hidden">
+    <h1 id="titlesm" class="md:hidden mt-16 font-bold m-0 text-white [font-family:'Montserrat',sans-serif]">Hello, Friends!</h1>
     <img src="/src/assets/Ruang Belajar.png" class="lg:hidden mt-4 md:mt-10 w-32 mb-6" alt="">
     <div class="container bg-white rounded-lg [box-shadow:0_14px_28px_rgba(0,0,0,0.25),0_10px_10px_rgba(0,0,0,0.22)] w-full h-full sm:h-[50%] lg:w-[768px] md:w-[60%] max-w-full mx-auto relative min-h-[480px] flex flex-col lg:flex-row" id="container">
         <!-- Sign In Form -->
@@ -30,11 +30,11 @@
                 <span class="text-xs">or use your account</span>
                 <input id="email2" class="bg-[#eee] [border:none] [padding:12px_15px] [margin:8px_0] w-full" type="email" placeholder="Email">
                 <input id="password2" class="bg-[#eee] [border:none] [padding:12px_15px] [margin:8px_0] w-full" type="password" placeholder="Password">
-                <a class="text-[#333] text-sm [text-decoration:none] my-[15px]" href="#">Forgot your password?</a>
-                <button type="submit" class="rounded-[20px] border-[1px] border-solid border-[#fbc2eb] bg-[#fbc2eb] text-white text-xs font-bold [padding:12px_45px] tracking-[1px] uppercase [transition:transform_80ms_ease-in]
+                <a class="text-sm [text-decoration:none] my-[15px]" href="#">Forgot your password?</a>
+                <button id="loginButton" type="submit" class="rounded-[20px] border-[1px] border-solid border-blue-900 bg-[#577180] text-white text-xs font-bold [padding:12px_45px] tracking-[1px] uppercase [transition:transform_80ms_ease-in]
                                     active:scale-[0.95]
                                     focus:[outline:none]">Sign In</button>
-                <a onclick="showSignUp()" class="lg:hidden text-[#333] text-sm underline my-[15px]" href="#">Create Account</a>
+                <a onclick="showSignUp()" class="lg:hidden text-sm underline my-[15px]" href="#">Create Account</a>
             </form>
         </div>
 
@@ -57,7 +57,7 @@
                 <input id="name" class="bg-[#eee] [border:none] [padding:12px_15px] [margin:8px_0] w-full" type="text" placeholder="Name">
                 <input id="email" class="bg-[#eee] [border:none] [padding:12px_15px] [margin:8px_0] w-full" type="email" placeholder="Email">
                 <input id="password" class="bg-[#eee] [border:none] [padding:12px_15px] [margin:8px_0] w-full" type="password" placeholder="Password">
-                <button type="submit" class="rounded-[20px] border-[1px] border-solid border-[#a6c1ee] bg-[#a6c1ee] text-white text-xs font-bold [padding:12px_45px] tracking-[1px] uppercase [transition:transform_80ms_ease-in]
+                <button id="loginButton" type="submit" class="rounded-[20px] border-[1px] border-solid border-blue-900 bg-[#577180] text-white text-xs font-bold [padding:12px_45px] tracking-[1px] uppercase [transition:transform_80ms_ease-in]
                                     active:scale-[0.95]
                                     focus:[outline:none]">Sign Up</button>
                 <a onclick="showSignIn()" class="lg:hidden text-[#333] text-sm underline my-[15px]" href="#">Back to Login</a>
@@ -66,13 +66,13 @@
         
         <!-- Overlay -->
         <div class="overlay-container absolute top-0 left-1/2 w-1/2 h-full overflow-hidden [transition:transform_0.6s_ease-in-out] z-[-1] lg:z-[100]">
-            <div class="overlay bg-[#ff416c] bg-gradient-to-r from-[#fbc2eb] to-[#a6c1ee] bg-no-repeat bg-cover [background-position:0_0] text-white relative left-[-100%] h-full w-[200%] translate-x-[0] [transition:transform_0.6s_ease-in-out]">
+            <div class="overlay bg-[#142229] bg-no-repeat bg-cover [background-position:0_0] text-white relative left-[-100%] h-full w-[200%] translate-x-[0] [transition:transform_0.6s_ease-in-out]">
                 <div class="overlay-panel absolute flex items-center justify-center flex-col [padding:0_40px] text-center top-0 h-full w-1/2 [transition:transform_0.6s_ease-in-out] overlay-left translate-x-[-20%]">
                     <h1 class="font-bold m-0">Welcome Back!</h1>
                     <p class="text-xs font-sm leading-5 trackig-[0.5px] [margin:20px_0_30px]">
                         To keep connected with us please login with your personal info
                     </p>
-                    <button class="rounded-[20px] border-[1px] border-solid border-white bg-transparent text-white text-xs font-bold [padding:12px_45px] tracking-[1px] uppercase [transition:transform_80ms_ease-in]
+                    <button class="rounded-[20px] border-[1px] border-solid border-white text-white text-xs font-bold [padding:12px_45px] tracking-[1px] uppercase [transition:transform_80ms_ease-in]
                                     active:scale-[0.95]
                                     focus:[outline:none]" id="signIn">Sign In</button>
                 </div>

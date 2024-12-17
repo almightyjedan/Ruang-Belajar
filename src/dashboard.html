@@ -12,17 +12,17 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <title>Ruang Belajar</title>
     <link rel="icon" href="/src/assets/Ruang Belajar.png" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-full overscroll-auto">
-    <header class="bg-white fixed top-0 left-0 w-full z-50 shadow-md">
+  <body class="font-[Poppins] bg-[#577180] text-white h-full overscroll-auto">
+    <header class="bg-[#142229] text-black font-bold fixed top-0 left-0 w-full z-50 shadow-md">
       <nav class="flex justify-between items-center w-[92%] mx-auto">
         <!-- Logo -->
         <div>
           <a href="#home"><img class="w-16 cursor-pointer" src="/src/assets/Ruang Belajar.png" alt="Logo"/></a>
         </div>
         <!-- Menu Navigation -->
-        <div id="navLinks" class="hidden rounded-xl text-center lg:flex flex-col lg:flex-row gap-6 bg-white lg:bg-transparent p-5 lg:p-0 lg:static absolute top-14 right-3 w-[50%] md:w-[30%] lg:w-auto">
+        <div id="navLinks" class="hidden text-black lg:text-white rounded-xl text-center lg:flex flex-col lg:flex-row gap-6 bg-white lg:bg-transparent p-5 lg:p-0 lg:static absolute top-14 right-3 w-[50%] md:w-[30%] lg:w-auto">
           <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-8 gap-8">
             <li>
               <a onclick="burger()" class="hover:text-gray-500" href="#home">Home</a>
@@ -46,22 +46,30 @@
             <li>
               <a onclick="burger()" class="hover:text-gray-500" href="#contactus">Contact Us</a>
             </li>
+            <li>
+              <a onclick="burger()" class="lg:hidden" href="index.html">Log Out</a>
+            </li>
           </ul>
         </div>
         <!-- Sign In & Burger Icon -->
         <div class="flex items-center gap-6">
-          <a href="index.html" class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</a>
-          <ion-icon id="burgerIcon" onclick="burger()" name="menu" class="text-3xl cursor-pointer lg:hidden"></ion-icon>
+          <a onclick="user()" id="usericon" class="cursor-pointer hidden border-solid border-2 text-white p-1 rounded-full hover:bg-gray-500 text-xl flex items-center justify-center gap-2">
+          <ion-icon ion-icon name="person" class="text-2xl"></ion-icon></a>
+          <div id="dropUser" class="absolute hidden bg-white rounded-lg text-sm mt-2 top-12 right-7 shadow-2xl">
+            <a id="logoutbutton" href="index.html" class="hidden lg:block px-6 py-2 hover:text-gray-500">Log Out</a>
+          </div>
+          <a id="signinbutton" href="index.html" class="bg-[#577180] text-white px-5 py-2 rounded-full hover:bg-gray-500">Sign in</a>
+          <ion-icon id="burgerIcon" onclick="burger()" name="menu" class="text-3xl text-white cursor-pointer lg:hidden"></ion-icon>
         </div>
       </nav>
     </header>
     <!-- Home -->
     <section class="text-center max-w-6xl mx-auto z-[-1] w-full py-[16px] px-6 md:px-[48px]" id="home">
       <div>
-        <h2 class="text-6xl font-bold text-white text-center my-20">
+        <h2 class="text-6xl font-bold text-center my-20">
           Apa itu Ruang Belajar?
         </h2>
-        <p class="text-white lg:leading-9 text-lg lg:text-xl mb-10">
+        <p class="lg:leading-9 text-lg lg:text-xl mb-10">
           Ruang Belajar adalah platform pembelajaran online yang dirancang untuk
           membantu siswa dan pengajar dalam proses belajar mengajar. Dengan
           berbagai materi pelajaran yang terstruktur dan mudah diakses, Ruang
@@ -72,31 +80,31 @@
           <ul>
             <li class="flex items-center mb-3">
               <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span class="text-white">Memudahkan akses ke materi pelajaran.</span>
+              <span>Memudahkan akses ke materi pelajaran.</span>
             </li>
             <li class="flex items-center mb-3">
               <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span class="text-white">Mendorong pembelajaran mandiri dan pengembangan diri.</span>
+              <span>Mendorong pembelajaran mandiri dan pengembangan diri.</span>
             </li>
             <li class="flex items-center mb-3">
               <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span class="text-white drop-shadow-md">Menyediakan metode pembelajaran yang sesuai dengan gaya belajar.</span>
+              <span>Menyediakan metode pembelajaran yang sesuai dengan gaya belajar.</span>
             </li>
             <li class="flex items-center mb-3">
               <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span class="text-white drop-shadow-md">Fleksibilitas waktu dan lokasi.</span>
+              <span>Fleksibilitas waktu dan lokasi.</span>
             </li>
             <li class="flex items-center mb-3">
               <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span class="text-white drop-shadow-md">Interaksi melalui forum diskusi dan sesi tanya jawab.</span>
+              <span>Interaksi melalui forum diskusi dan sesi tanya jawab.</span>
             </li>
           </ul>
         </div>
       </div>
     </section>
     <div class="w-[90%] lg:w-[75%] flex flex-col justify-center mx-auto mt-[100px]">
-      <section class="brand-section p-8 bg-[#f4f4f4] bg-opacity-[40%] mb-10 rounded-[15px]">
-        <h2 class="text-5xl font-bold text-white text-center mt-10 mb-16">
+      <section class="brand-section p-8 bg-white text-black bg-opacity-[40%] mb-10 rounded-[15px]">
+        <h2 class="text-white text-5xl font-bold text-center mt-10 mb-16">
           Kenapa sih harus Ruang Belajar?
         </h2>
         <div class="brand-grid grid grid-cols-1 lg:grid-cols-3 gap-[16px]">
@@ -167,13 +175,13 @@
 
     <section>
       <div class="logo-container mb-10 overflow-hidden flex">
-        <div class="logo flex shrink-0 gap-[3rem] p-[1rem] [animation:_inifite-scroll_110s_linear_infinite;] lg:[animation:_inifite-scroll_60s_linear_infinite;]">
+        <div class="text-black logo flex shrink-0 gap-[3rem] p-[1rem] [animation:_inifite-scroll_110s_linear_infinite;] lg:[animation:_inifite-scroll_60s_linear_infinite;]">
           <div class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary">
             <div class="flex h-20 w-full items-center space-x-5">
               <img alt="Muhammad Zaidan Ahbab" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/testimoni/WhatsApp Image 2024-01-10 at 11.03.28_cda473ca.png"/>
               <div class="flex h-full flex-col items-start justify-start space-y-1">
                 <span class="text-md text-left font-semibold md:text-lg">Muhammad Zaidan Ahbab</span>
-                <span class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400">
+                <span class="md:text-md line-clamp-2 text-left text-sm">
                   <p>Teknik Informatika</p>
                   <p>Universitas Pancasila</p>
                 </span>
@@ -194,7 +202,7 @@
               <img alt="Mohammad Sayifullah" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/archery-8564584_1920.png"/>
               <div class="flex h-full flex-col items-start justify-start space-y-1">
                 <span class="text-md text-left font-semibold md:text-lg">Mohammad Sayifullah</span>
-                <span class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400">
+                <span class="md:text-md line-clamp-2 text-left text-sm">
                   <p>Teknik Informatika</p>
                   <p>Universitas Pancasila</p>
                 </span>
@@ -215,7 +223,7 @@
               <img alt="Naufal Maulana Saputra" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/chronometer-152905_1920.png"/>
               <div class="flex h-full flex-col items-start justify-start space-y-1">
                 <span class="text-md text-left font-semibold md:text-lg">Naufal Maulana Saputra</span>
-                <span class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400">
+                <span class="md:text-md line-clamp-2 text-left text-sm">
                   <p>Teknik Informatika</p>
                   <p>Universitas Pancasila</p>
                 </span>
@@ -236,7 +244,7 @@
               <img alt="Lintang Triandini Julia Putri" class="size-[72px] flex-shrink-0 rounded-full border object-cover"src="assets/pedal.png"/>
               <div class="flex h-full flex-col items-start justify-start space-y-1">
                 <span class="text-md text-left font-semibold md:text-lg">Lintang Triandini Julia Putri</span>
-                <span class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400">
+                <span class="md:text-md line-clamp-2 text-left text-sm">
                   <p>Teknik Informatika</p>
                   <p>Universitas Pancasila</p>
                 </span>
@@ -257,7 +265,7 @@
               <img alt="Irmawati Pakpahan" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/metal.png"/>
               <div class="flex h-full flex-col items-start justify-start space-y-1">
                 <span class="text-md text-left font-semibold md:text-lg">Irmawati Pakpahan</span>
-                <span class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400">
+                <span class="md:text-md line-clamp-2 text-left text-sm">
                   <p>Teknik Informatika</p>
                   <p>Universitas Pancasila</p>
                 </span>
@@ -291,8 +299,8 @@
         </div>
       </div>
 
-      <div class="mt-10 flex flex-col md:flex-row gap-8 sm:gap-12 lg:gap-20">
-        <div class="bg-gray-200 rounded-lg p-4 sm:p-6 md:w-1/2">
+      <div class="text-black mt-10 flex flex-col md:flex-row gap-8 sm:gap-12 lg:gap-20">
+        <div class="bg-white rounded-lg p-4 sm:p-6 md:w-1/2">
           <p class="text-justify text-sm sm:text-base leading-relaxed">
             Ruang Belajar adalah platform belajar online yang didirikan pada
             tahun 2024. Kami berkomitmen untuk memberikan solusi belajar yang
@@ -303,7 +311,7 @@
           </p>
         </div>
 
-        <div id="contactus" class="rounded-lg bg-gray-200 p-4 sm:p-6 md:w-1/2 flex items-center justify-center">
+        <div id="contactus" class="rounded-lg bg-white p-4 sm:p-6 md:w-1/2 flex items-center justify-center">
           <p class="text-justify text-sm sm:text-base leading-relaxed">
             Ruang Belajar adalah platform belajar online yang didirikan pada
             tahun 2024. Kami berkomitmen untuk memberikan solusi belajar yang
@@ -316,9 +324,9 @@
       </div>
     </section>
 
-    <hr class="h-0.5 flex-grow bg-secondary/25 dark:bg-white/25" />
+    <hr class="h-0.5 flex-grow" />
     <h2 class="text-5xl font-bold text-white text-center">Contact Us</h2>
-    <hr class="h-0.5 flex-grow bg-secondary/25 dark:bg-white/25" />
+    <hr class="h-0.5 flex-grow" />
 
     <!-- Contact Us Section -->
     <section class="md:w-[60%] mx-auto rounded-lg p-8 mt-8 py-[16px]">
@@ -326,7 +334,7 @@
         <div>
           <form class="flex flex-col gap-4">
             <div>
-              <label class="block text-gray-600 mb-2">Nama :</label>
+              <label class="block mb-2">Nama :</label>
               <input
                 type="text"
                 placeholder="Masukkan nama Anda"
@@ -334,7 +342,7 @@
               />
             </div>
             <div>
-              <label class="block text-gray-600 mb-2">Email :</label>
+              <label class="block mb-2">Email :</label>
               <input
                 type="email"
                 placeholder="Masukkan email Anda"
@@ -342,7 +350,7 @@
               />
             </div>
             <div>
-              <label class="block text-gray-600 mb-2">No. Telp :</label>
+              <label class="block mb-2">No. Telp :</label>
               <input
                 type="tel"
                 placeholder="Masukkan nomor telepon Anda"
@@ -350,40 +358,40 @@
               />
             </div>
             <div>
-              <label class="block text-gray-600 mb-2">Pesan :</label>
+              <label class="block mb-2">Pesan :</label>
               <textarea
                 placeholder="Tulis pesan Anda di sini"
                 class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300"
               ></textarea>
             </div>
-            <button class="w-full bg-purple-500 text-white font-bold py-2 rounded-lg shadow hover:bg-purple-600">Kirim</button>
+            <button class="w-full bg-green-700 text-white font-bold py-2 rounded-lg shadow hover:bg-green-900">Kirim</button>
           </form>
         </div>
       </div>
     </section>
 
-    <footer class="bg-white text-black py-4">
+    <footer class="lg:py-4">
       <div class="container mx-auto text-center text-sm">
-        <div class="bg-gradient-to-br from-purple-100 to-blue-100 pb-4 pt-6 rounded-lg shadow items-center">
+        <div class="bg-[#142229] pb-4 pt-6 lg:rounded-lg shadow items-center">
           <ul class="grid gap-4 md:grid-cols-5 sm:grid-cols-2 items-center grid-cols-1 text-center">
             <li class="flex flex-col items-center">
-              <ion-icon name="call-outline" class="text-black text-3xl"></ion-icon>
+              <ion-icon name="call-outline" class="text-3xl"></ion-icon>
               <span>0813-2275-8710</span>
             </li>
             <li class="flex flex-col items-center">
-              <ion-icon name="mail-outline" class="text-black text-3xl"></ion-icon>
+              <ion-icon name="mail-outline" class="text-3xl"></ion-icon>
               <span>ruangbelajar@gmail.com</span>
             </li>
             <li class="flex flex-col items-center">
-              <ion-icon name="logo-instagram" class="text-black text-3xl"></ion-icon>
+              <ion-icon name="logo-instagram" class="text-3xl"></ion-icon>
               <span>@ruangbelajar</span>
             </li>
             <li class="flex flex-col items-center">
-              <ion-icon name="logo-youtube" class="text-black text-3xl"></ion-icon>
+              <ion-icon name="logo-youtube" class="text-3xl"></ion-icon>
               <span>ruangbelajar</span>
             </li>
             <li class="flex flex-col items-center md:col-span-1 sm:col-span-2">
-              <ion-icon name="logo-twitter" class="text-black text-3xl"></ion-icon>
+              <ion-icon name="logo-twitter" class="text-3xl"></ion-icon>
               <span>ruangbelajar</span>
             </li>
           </ul>

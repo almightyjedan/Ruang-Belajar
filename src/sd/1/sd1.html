@@ -16,9 +16,9 @@
     <link rel="icon" href="../../assets/Ruang Belajar.png" />
   </head>
   <body
-    class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-full overscroll-auto"
+    class="font-[Poppins] bg-blue-900 text-white h-full overscroll-auto"
   >
-    <header class="bg-white fixed top-0 left-0 w-full z-50 shadow-md">
+    <header class="bg-[#a6c1ee] text-black font-bold fixed top-0 left-0 w-full z-50 shadow-md">
       <nav class="flex justify-between items-center w-[92%] mx-auto">
         <!-- Logo -->
         <div>
@@ -60,7 +60,7 @@
         <div class="flex items-center gap-6">
           <a
             href="../../index.html"
-            class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
+            class="bg-blue-900 text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
             >Sign in</a
           >
           <ion-icon
@@ -78,7 +78,7 @@
             <div class="text-center">
               <!-- Dropdown Menu -->
               <label for="kelas" class="block text-lg font-medium">Pilih Kelas:</label>
-              <select id="kelas" class="hover:text-gray-500 border border-gray-300 rounded-lg px-4 py-2 mt-2"  onchange="navigateToPage()">
+              <select id="kelas" class="hover:text-gray-500 text-black border border-gray-300 rounded-lg px-4 py-2 mt-2"  onchange="navigateToPage()">
                 <option value="1" disabled selected>Kelas 1 SD</option>
                 <option value="2">Kelas 2 SD</option>
                 <option value="3">Kelas 3 SD</option>
@@ -90,7 +90,7 @@
         
             <h2 class="mt-6 text-center text-xl font-semibold">Hai, @Nama! Mau belajar apa hari ini?</h2>
         
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 text-black">
               <!-- Card Template -->
               <div onclick="goToPage('./mtk.html')" class="bg-white shadow-md rounded-lg p-4 text-center hover:scale-[1.03] active:scale-[1]">
                 <div class=""><img class="w-full rounded-lg h-56 mb-4 object-cove" src="assets/mtk.jpg" alt=""> </div>
@@ -134,19 +134,6 @@
             </div>
           </main>
         </section>
-        <footer class="bg-white text-black pb-2 pt-4 mt-10">
-            <div class="text-center ">
-              <a class="mx-2 text-lg hover:underline" href="../../dashboard.html">Home</a>
-              <a class="mx-2 text-lg hover:underline" href="../../dashboard.html#testimoni">Testimoni</a>
-              <a class="mx-2 text-lg hover:underline" href="#tingkat">Tingkat</a>
-              <a class="mx-2 text-lg hover:underline" href="../../dashboard.html#aboutus">About Us</a>
-              <a class="mx-2 text-lg hover:underline" href="../../dashboard.html#contactus">Contact Us</a>
-            </div>
-              <div class="container mx-auto text-center text-sm pt-2">
-              <p>&copy; 2024 Ruang Belajar. All rights reserved.</p>
-            </div>
-        </footer>
-    
         <script src="../../script.js"></script>
         <script src="../kelas.js"></script>
         </body>

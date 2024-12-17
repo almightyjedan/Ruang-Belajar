@@ -17,7 +17,6 @@ const switchToSignIn = document.getElementById('switchToSignIn');
 const titlesm = document.getElementById('titlesm');
 
 // Fungsi untuk beralih ke Sign Up
-
 function showSignUp() {
   signupForm.classList.remove('sm:hidden');
   document.getElementById('signinForm').style.display = 'none';
