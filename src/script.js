@@ -31,3 +31,18 @@ window.addEventListener("click", function (event) {
     dropdown.classList.add("hidden");
   }
 });
+
+const loggedin = localStorage.getItem('loggedin');
+
+if (loggedin === "1") { 
+  signinbutton.classList.add("hidden");
+  usericon.classList.remove("hidden");
+} else {
+  signinbutton.classList.remove("hidden");
+  usericon.classList.add("hidden");
+}
+
+function user() {
+  const dropUser = document.getElementById("dropUser");
+  dropUser.classList.toggle("hidden"); 
+}

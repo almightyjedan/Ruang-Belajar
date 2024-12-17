@@ -12,16 +12,17 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <title>Ruang Belajar</title>
     <link rel="icon" href="/src/assets/Ruang Belajar.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="font-[Poppins] bg-blue-900 text-white h-full overscroll-auto">
-    <header class="bg-[#a6c1ee] text-black font-bold fixed top-0 left-0 w-full z-50 shadow-md">
+  <body class="font-[Poppins] bg-[#577180] text-white h-full overscroll-auto">
+    <header class="bg-[#142229] text-black font-bold fixed top-0 left-0 w-full z-50 shadow-md">
       <nav class="flex justify-between items-center w-[92%] mx-auto">
         <!-- Logo -->
         <div>
           <a href="#home"><img class="w-16 cursor-pointer" src="/src/assets/Ruang Belajar.png" alt="Logo"/></a>
         </div>
         <!-- Menu Navigation -->
-        <div id="navLinks" class="hidden rounded-xl text-center lg:flex flex-col lg:flex-row gap-6 bg-white lg:bg-transparent p-5 lg:p-0 lg:static absolute top-14 right-3 w-[50%] md:w-[30%] lg:w-auto">
+        <div id="navLinks" class="hidden text-black lg:text-white rounded-xl text-center lg:flex flex-col lg:flex-row gap-6 bg-white lg:bg-transparent p-5 lg:p-0 lg:static absolute top-14 right-3 w-[50%] md:w-[30%] lg:w-auto">
           <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-8 gap-8">
             <li>
               <a onclick="burger()" class="hover:text-gray-500" href="#home">Home</a>
@@ -45,19 +46,27 @@
             <li>
               <a onclick="burger()" class="hover:text-gray-500" href="#contactus">Contact Us</a>
             </li>
+            <li>
+              <a onclick="burger()" class="lg:hidden" href="index.html">Log Out</a>
+            </li>
           </ul>
         </div>
         <!-- Sign In & Burger Icon -->
         <div class="flex items-center gap-6">
-          <a href="index.html" class="bg-blue-900 text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</a>
-          <ion-icon id="burgerIcon" onclick="burger()" name="menu" class="text-3xl cursor-pointer lg:hidden"></ion-icon>
+          <a onclick="user()" id="usericon" class="cursor-pointer hidden border-solid border-2 text-white p-1 rounded-full hover:bg-gray-500 text-xl flex items-center justify-center gap-2">
+          <ion-icon ion-icon name="person" class="text-2xl"></ion-icon></a>
+          <div id="dropUser" class="absolute hidden bg-white rounded-lg text-sm mt-2 top-12 right-7 shadow-2xl">
+            <a id="logoutbutton" href="index.html" class="hidden lg:block px-6 py-2 hover:text-gray-500">Log Out</a>
+          </div>
+          <a id="signinbutton" href="index.html" class="bg-[#577180] text-white px-5 py-2 rounded-full hover:bg-gray-500">Sign in</a>
+          <ion-icon id="burgerIcon" onclick="burger()" name="menu" class="text-3xl text-white cursor-pointer lg:hidden"></ion-icon>
         </div>
       </nav>
     </header>
     <!-- Home -->
     <section class="text-center max-w-6xl mx-auto z-[-1] w-full py-[16px] px-6 md:px-[48px]" id="home">
       <div>
-        <h2 class="text-6xl font-bold  text-center my-20">
+        <h2 class="text-6xl font-bold text-center my-20">
           Apa itu Ruang Belajar?
         </h2>
         <p class="lg:leading-9 text-lg lg:text-xl mb-10">
@@ -355,15 +364,15 @@
                 class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300"
               ></textarea>
             </div>
-            <button class="w-full bg-green-500 text-white font-bold py-2 rounded-lg shadow hover:bg-green-700">Kirim</button>
+            <button class="w-full bg-green-700 text-white font-bold py-2 rounded-lg shadow hover:bg-green-900">Kirim</button>
           </form>
         </div>
       </div>
     </section>
 
-    <footer class="bg-white py-4">
+    <footer class="lg:py-4">
       <div class="container mx-auto text-center text-sm">
-        <div class="bg-blue-900 pb-4 pt-6 rounded-lg shadow items-center">
+        <div class="bg-[#142229] pb-4 pt-6 lg:rounded-lg shadow items-center">
           <ul class="grid gap-4 md:grid-cols-5 sm:grid-cols-2 items-center grid-cols-1 text-center">
             <li class="flex flex-col items-center">
               <ion-icon name="call-outline" class="text-3xl"></ion-icon>
