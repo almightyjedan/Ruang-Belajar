@@ -45,20 +45,40 @@ signupForm.addEventListener("submit", function (event) {
 });
 
 // Ambil elemen
+<<<<<<< HEAD
 const switchToSignUp = document.getElementById("switchToSignUp");
 const switchToSignIn = document.getElementById("switchToSignIn");
 const titlesm = document.getElementById("titlesm");
+=======
+const switchToSignUp = document.getElementById('switchToSignUp');
+const switchToSignIn = document.getElementById('switchToSignIn');
+const titlesm = document.getElementById('titlesm');
+>>>>>>> f41beaf96489ab7136bfae380daae60eb93b242f
 
 // Fungsi untuk beralih ke Sign Up
 
 function showSignUp() {
+<<<<<<< HEAD
   signupForm.classList.remove("sm:hidden");
   document.getElementById("signinForm").style.display = "none";
+=======
+  signupForm.classList.remove('sm:hidden');
+  document.getElementById('signinForm').style.display = 'none';
+>>>>>>> f41beaf96489ab7136bfae380daae60eb93b242f
   titlesm.textContent = "Welcome Back!";
 }
 
 function showSignIn() {
+<<<<<<< HEAD
   signupForm.classList.add("sm:hidden");
   document.getElementById("signinForm").style.display = "block";
   titlesm.textContent = "Hello, Friends!";
 }
+=======
+  signupForm.classList.add('sm:hidden');
+  document.getElementById('signinForm').style.display = 'block';
+  titlesm.textContent = "Hello, Friends!";
+}
+
+
+>>>>>>> f41beaf96489ab7136bfae380daae60eb93b242f
