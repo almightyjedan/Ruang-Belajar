@@ -630,6 +630,17 @@ video {
 
 .top-14 {
   top: 3.5rem;
+<<<<<<< HEAD
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+=======
+>>>>>>> f41beaf96489ab7136bfae380daae60eb93b242f
 }
 
 .top-5 {
@@ -640,8 +651,12 @@ video {
   top: 1.5rem;
 }
 
-.top-\[9\%\] {
-  top: 9%;
+.z-10 {
+  z-index: 10;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .z-10 {

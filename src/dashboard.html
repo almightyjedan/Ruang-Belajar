@@ -7,51 +7,42 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <title>Ruang Belajar</title>
     <link rel="icon" href="/src/assets/Ruang Belajar.png" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
-  <body
-    class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-full overscroll-auto"
-  >
+  <body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-full overscroll-auto">
     <header class="bg-white fixed top-0 left-0 w-full z-50 shadow-md">
       <nav class="flex justify-between items-center w-[92%] mx-auto">
         <!-- Logo -->
         <div>
-          <a href="#home"><img class="w-16 cursor-pointer" src="/src/assets/Ruang Belajar.png" alt="Logo"></a>
+          <a href="#home"><img class="w-16 cursor-pointer" src="/src/assets/Ruang Belajar.png" alt="Logo"/></a>
         </div>
         <!-- Menu Navigation -->
-        <div
-          id="navLinks"
-          class="hidden rounded-xl text-center lg:flex flex-col lg:flex-row gap-6 bg-white lg:bg-transparent p-5 lg:p-0 lg:static absolute top-14 right-3 w-[50%] md:w-[30%] lg:w-auto"
-        >
+        <div id="navLinks" class="hidden rounded-xl text-center lg:flex flex-col lg:flex-row gap-6 bg-white lg:bg-transparent p-5 lg:p-0 lg:static absolute top-14 right-3 w-[50%] md:w-[30%] lg:w-auto">
           <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-8 gap-8">
-            <li><a onclick="burger()" class="hover:text-gray-500" href="#home">Home</a></li>
+            <li>
+              <a onclick="burger()" class="hover:text-gray-500" href="#home">Home</a>
+            </li>
             <li>
               <a onclick="burger()" class="hover:text-gray-500" href="#testimoni">Testimoni</a>
             </li>
             <div class="relative group flex justify-center">
               <li onclick="tingkat()" class="cursor-pointer flex justify-center">
-                <a class="flex items-center gap-1 hover:text-gray-500" href="#tingkat"
-                  >Tingkat
-                  <ion-icon name="chevron-down-outline"></ion-icon>
-                </a>
+                <a class="flex items-center gap-1 hover:text-gray-500" href="#tingkat">Tingkat<ion-icon name="chevron-down-outline"></ion-icon></a>
               </li>
-              <div
-                id="dropTingkat"
-                class="absolute hidden bg-white rounded-lg text-sm mt-2 top-6 shadow-2xl"
-              >
+              <div id="dropTingkat" class="absolute hidden bg-white rounded-lg text-sm mt-2 top-6 shadow-2xl">
                 <a href="sd/1/sd1.html" class="block px-6 py-2 hover:text-gray-500">SD</a>
                 <a href="smp/1/smp1.html" class="block px-6 py-2 hover:text-gray-500">SMP</a>
                 <a href="sma/1/sma1.html" class="block px-6 py-2 hover:text-gray-500">SMA/SMK</a>
               </div>
             </div>
-            <li><a onclick="burger()" class="hover:text-gray-500" href="#aboutus">About Us</a></li>
+            <li>
+              <a onclick="burger()" class="hover:text-gray-500" href="#aboutus">About Us</a>
+            </li>
             <li>
               <a onclick="burger()" class="hover:text-gray-500" href="#contactus">Contact Us</a>
             </li>
@@ -59,25 +50,13 @@
         </div>
         <!-- Sign In & Burger Icon -->
         <div class="flex items-center gap-6">
-          <a
-            href="index.html"
-            class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
-            >Sign in</a
-          >
-          <ion-icon
-            id="burgerIcon"
-            onclick="burger()"
-            name="menu"
-            class="text-3xl cursor-pointer lg:hidden"
-          ></ion-icon>
+          <a href="index.html" class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</a>
+          <ion-icon id="burgerIcon" onclick="burger()" name="menu" class="text-3xl cursor-pointer lg:hidden"></ion-icon>
         </div>
       </nav>
     </header>
     <!-- Home -->
-    <section
-      class="text-center max-w-6xl mx-auto z-[-1] w-full py-[16px] px-6 md:px-[48px]"
-      id="home"
-    >
+    <section class="text-center max-w-6xl mx-auto z-[-1] w-full py-[16px] px-6 md:px-[48px]" id="home">
       <div>
         <h2 class="text-6xl font-bold text-white text-center my-20">
           Apa itu Ruang Belajar?
@@ -93,62 +72,42 @@
           <ul>
             <li class="flex items-center mb-3">
               <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span class="text-white"
-                >Memudahkan akses ke materi pelajaran.</span
-              >
+              <span class="text-white">Memudahkan akses ke materi pelajaran.</span>
             </li>
             <li class="flex items-center mb-3">
               <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span class="text-white"
-                >Mendorong pembelajaran mandiri dan pengembangan diri.</span
-              >
-            </li> <li class="flex items-center mb-3">
-              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span class="text-white drop-shadow-md"
-                >Menyediakan metode pembelajaran yang sesuai dengan gaya
-                belajar.</span
-              >
+              <span class="text-white">Mendorong pembelajaran mandiri dan pengembangan diri.</span>
             </li>
             <li class="flex items-center mb-3">
               <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span class="text-white drop-shadow-md"
-                >Fleksibilitas waktu dan lokasi.</span
-              >
+              <span class="text-white drop-shadow-md">Menyediakan metode pembelajaran yang sesuai dengan gaya belajar.</span>
             </li>
             <li class="flex items-center mb-3">
               <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span class="text-white drop-shadow-md"
-                >Interaksi melalui forum diskusi dan sesi tanya jawab.</span
-              >
+              <span class="text-white drop-shadow-md">Fleksibilitas waktu dan lokasi.</span>
+            </li>
+            <li class="flex items-center mb-3">
+              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
+              <span class="text-white drop-shadow-md">Interaksi melalui forum diskusi dan sesi tanya jawab.</span>
             </li>
           </ul>
         </div>
       </div>
     </section>
     <div class="w-[90%] lg:w-[75%] flex flex-col justify-center mx-auto mt-[100px]">
-      <section
-        class="brand-section p-8 bg-[#f4f4f4] bg-opacity-[40%] mb-10 rounded-[15px]"
-      >
-        <h2 class="text-5xl font-bold text-white text-center mt-20 mb-16">
+      <section class="brand-section p-8 bg-[#f4f4f4] bg-opacity-[40%] mb-10 rounded-[15px]">
+        <h2 class="text-5xl font-bold text-white text-center mt-10 mb-16">
           Kenapa sih harus Ruang Belajar?
         </h2>
         <div class="brand-grid grid grid-cols-1 lg:grid-cols-3 gap-[16px]">
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
-            <a 
-              ><img
-                src="assets/human-2099157_1920.png"
-                class="w-full max-h-[120px] object-contain"
-            /></a>
+            <a><img src="assets/human-2099157_1920.png" class="w-full max-h-[120px] object-contain"/></a>
             <h3 class="text-2xl uppercase mt-10 mb-5">Ngerti sampe akar</h3>
             <p>Belajar buat paham konsep sampe kebayang banget...</p>
           </div>
 
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
-            <a
-              ><img
-                src="assets/archery-8564584_1920.png"
-                class="w-full max-h-[120px] object-contain"
-            /></a>
+            <a><img src="assets/archery-8564584_1920.png" class="w-full max-h-[120px] object-contain"/></a>
             <h3 class="text-2xl uppercase mt-10 mb-5">to the point</h3>
             <p>
               Ga ada lagi cerita belajar di kelas planga-plongo ketinggalan
@@ -157,11 +116,7 @@
             </p>
           </div>
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
-            <a
-              ><img
-                src="assets/metal.png"
-                class="w-full max-h-[120px] object-contain"
-            /></a>
+            <a><img src="assets/metal.png" class="w-full max-h-[120px] object-contain"/></a>
             <h3 class="text-2xl uppercase mt-10 mb-5">gaul abis!</h3>
             <p>
               Tutor2 Ruang Belajar friendly dan seneng ngajar, jadinya seru
@@ -170,11 +125,7 @@
             </p>
           </div>
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
-            <a
-              ><img
-                src="assets/chronometer-152905_1920.png"
-                class="w-full max-h-[120px] object-contain"
-            /></a>
+            <a><img src="assets/chronometer-152905_1920.png" class="w-full max-h-[120px] object-contain"/></a>
             <h3 class="text-2xl uppercase mt-10 mb-5">
               any time u want, any time u need
             </h3>
@@ -184,11 +135,7 @@
             </p>
           </div>
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
-            <a 
-              ><img
-                src="assets/light-bulb-8611062_1920.png"
-                class="w-full max-h-[120px] object-contain"
-            /></a>
+            <a><img src="assets/light-bulb-8611062_1920.png" class="w-full max-h-[120px] object-contain"/></a>
             <h3 class="text-2xl uppercase mt-10 mb-5">mind blowing!</h3>
             <p>
               Ruang Belajar ga cuma pengen kalian lolos ujian atau nilai bagus
@@ -197,12 +144,10 @@
             </p>
           </div>
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
-            <a 
-              ><img
-                src="assets/pedal.png"
-                class="w-full max-h-[120px] object-contain"
-            /></a>
-            <h3 id="testimoni" class="text-2xl uppercase mt-10 mb-5">gas polll!!</h3>
+            <a><img src="assets/pedal.png" class="w-full max-h-[120px] object-contain"/></a>
+            <h3 id="testimoni" class="text-2xl uppercase mt-10 mb-5">
+              gas polll!!
+            </h3>
             <p>
               Mau belajar atau les di mana aja bebas, tapi belajar sendiri buat
               sampe bikin jago ya sama zenius, iya gak??
@@ -222,28 +167,13 @@
 
     <section>
       <div class="logo-container mb-10 overflow-hidden flex">
-        <div
-          class="logo flex shrink-0 gap-[3rem] p-[1rem] [animation:_inifite-scroll_110s_linear_infinite;] lg:[animation:_inifite-scroll_60s_linear_infinite;]"
-          
-        >
-          <div
-            class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary"
-          >
+        <div class="logo flex shrink-0 gap-[3rem] p-[1rem] [animation:_inifite-scroll_110s_linear_infinite;] lg:[animation:_inifite-scroll_60s_linear_infinite;]">
+          <div class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary">
             <div class="flex h-20 w-full items-center space-x-5">
-              <img
-                alt="Muhammad Zaidan Ahbab"
-                class="size-[72px] flex-shrink-0 rounded-full border object-cover"
-                src="assets/testimoni/WhatsApp Image 2024-01-10 at 11.03.28_cda473ca.png"
-              />
-              <div
-                class="flex h-full flex-col items-start justify-start space-y-1"
-              >
-                <span class="text-md text-left font-semibold md:text-lg"
-                  >Muhammad Zaidan Ahbab</span
-                >
-                <span
-                  class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400"
-                >
+              <img alt="Muhammad Zaidan Ahbab" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/testimoni/WhatsApp Image 2024-01-10 at 11.03.28_cda473ca.png"/>
+              <div class="flex h-full flex-col items-start justify-start space-y-1">
+                <span class="text-md text-left font-semibold md:text-lg">Muhammad Zaidan Ahbab</span>
+                <span class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400">
                   <p>Teknik Informatika</p>
                   <p>Universitas Pancasila</p>
                 </span>
@@ -259,24 +189,12 @@
             </div>
           </div>
 
-          <div
-            class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary"
-          >
+          <div class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary">
             <div class="flex h-20 w-full items-center space-x-5">
-              <img
-                alt="Mohammad Sayifullah"
-                class="size-[72px] flex-shrink-0 rounded-full border object-cover"
-                src="assets/archery-8564584_1920.png"
-              />
-              <div
-                class="flex h-full flex-col items-start justify-start space-y-1"
-              >
-                <span class="text-md text-left font-semibold md:text-lg"
-                  >Mohammad Sayifullah</span
-                >
-                <span
-                  class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400"
-                >
+              <img alt="Mohammad Sayifullah" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/archery-8564584_1920.png"/>
+              <div class="flex h-full flex-col items-start justify-start space-y-1">
+                <span class="text-md text-left font-semibold md:text-lg">Mohammad Sayifullah</span>
+                <span class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400">
                   <p>Teknik Informatika</p>
                   <p>Universitas Pancasila</p>
                 </span>
@@ -292,24 +210,12 @@
             </div>
           </div>
 
-          <div
-            class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary"
-          >
+          <div class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary">
             <div class="flex h-20 w-full items-center space-x-5">
-              <img
-                alt="Naufal Maulana Saputra"
-                class="size-[72px] flex-shrink-0 rounded-full border object-cover"
-                src="assets/chronometer-152905_1920.png"
-              />
-              <div
-                class="flex h-full flex-col items-start justify-start space-y-1"
-              >
-                <span class="text-md text-left font-semibold md:text-lg"
-                  >Naufal Maulana Saputra</span
-                >
-                <span
-                  class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400"
-                >
+              <img alt="Naufal Maulana Saputra" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/chronometer-152905_1920.png"/>
+              <div class="flex h-full flex-col items-start justify-start space-y-1">
+                <span class="text-md text-left font-semibold md:text-lg">Naufal Maulana Saputra</span>
+                <span class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400">
                   <p>Teknik Informatika</p>
                   <p>Universitas Pancasila</p>
                 </span>
@@ -325,24 +231,12 @@
             </div>
           </div>
 
-          <div
-            class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary"
-          >
+          <div class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary">
             <div class="flex h-20 w-full items-center space-x-5">
-              <img
-                alt="Lintang Triandini Julia Putri"
-                class="size-[72px] flex-shrink-0 rounded-full border object-cover"
-                src="assets/pedal.png"
-              />
-              <div
-                class="flex h-full flex-col items-start justify-start space-y-1"
-              >
-                <span class="text-md text-left font-semibold md:text-lg"
-                  >Lintang Triandini Julia Putri</span
-                >
-                <span
-                  class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400"
-                >
+              <img alt="Lintang Triandini Julia Putri" class="size-[72px] flex-shrink-0 rounded-full border object-cover"src="assets/pedal.png"/>
+              <div class="flex h-full flex-col items-start justify-start space-y-1">
+                <span class="text-md text-left font-semibold md:text-lg">Lintang Triandini Julia Putri</span>
+                <span class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400">
                   <p>Teknik Informatika</p>
                   <p>Universitas Pancasila</p>
                 </span>
@@ -358,30 +252,18 @@
             </div>
           </div>
 
-          <div
-            class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary"
-          >
+          <div class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary">
             <div class="flex h-20 w-full items-center space-x-5">
-              <img
-                alt="Irmawati Pakpahan"
-                class="size-[72px] flex-shrink-0 rounded-full border object-cover"
-                src="assets/metal.png"
-              />
-              <div
-                class="flex h-full flex-col items-start justify-start space-y-1"
-              >
-                <span class="text-md text-left font-semibold md:text-lg"
-                  >Irmawati Pakpahan</span
-                >
-                <span
-                  class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400"
-                >
+              <img alt="Irmawati Pakpahan" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/metal.png"/>
+              <div class="flex h-full flex-col items-start justify-start space-y-1">
+                <span class="text-md text-left font-semibold md:text-lg">Irmawati Pakpahan</span>
+                <span class="md:text-md line-clamp-2 text-left text-sm text-gray-500 dark:text-gray-400">
                   <p>Teknik Informatika</p>
                   <p>Universitas Pancasila</p>
                 </span>
               </div>
             </div>
-            <div  id="aboutus" class="block">
+            <div id="aboutus" class="block">
               <p class="md:text-md text-left text-sm">
                 Ruang Belajar tidak hanya jadi jembatan saya sampai ke titik
                 ini. Ruang Belajar mampu mengupgrade skill belajar saya sampai
@@ -398,36 +280,45 @@
       <div class="relative bg-[url('assets/anak.jpg')] bg-cover bg-center bg-no-repeat h-[50vh] sm:h-[60vh] rounded-lg shadow-lg overflow-hidden w-full">
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="relative z-10 text-white px-4 sm:px-8 lg:px-12">
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-6 sm:mt-10 mx-2 sm:mx-3">Tentang Ruang Belajar</h2>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-6 sm:mt-10 mx-2 sm:mx-3">
+            Tentang Ruang Belajar
+          </h2>
           <p class="text-sm sm:text-lg lg:text-xl leading-relaxed mx-2 sm:mx-3 mt-4">
-            Menyediakan tempat belajar yang efisien dan efektif dengan <br class="hidden sm:block" />
+            Menyediakan tempat belajar yang efisien dan efektif dengan
+            <br class="hidden sm:block" />
             cara belajar yang menyenangkan
           </p>
         </div>
       </div>
-    
+
       <div class="mt-10 flex flex-col md:flex-row gap-8 sm:gap-12 lg:gap-20">
         <div class="bg-gray-200 rounded-lg p-4 sm:p-6 md:w-1/2">
           <p class="text-justify text-sm sm:text-base leading-relaxed">
-            Ruang Belajar adalah platform belajar online yang didirikan pada tahun 2024. Kami berkomitmen untuk memberikan solusi belajar yang inovatif dan efektif bagi siswa di seluruh Indonesia. 
-            Dengan katalog materi pelajaran yang luas, mulai dari Matematika, Bahasa Indonesia, hingga sains, kami membantu siswa menguasai semua pelajaran dengan mudah.
+            Ruang Belajar adalah platform belajar online yang didirikan pada
+            tahun 2024. Kami berkomitmen untuk memberikan solusi belajar yang
+            inovatif dan efektif bagi siswa di seluruh Indonesia. Dengan katalog
+            materi pelajaran yang luas, mulai dari Matematika, Bahasa Indonesia,
+            hingga sains, kami membantu siswa menguasai semua pelajaran dengan
+            mudah.
           </p>
         </div>
-    
+
         <div id="contactus" class="rounded-lg bg-gray-200 p-4 sm:p-6 md:w-1/2 flex items-center justify-center">
           <p class="text-justify text-sm sm:text-base leading-relaxed">
-            Ruang Belajar adalah platform belajar online yang didirikan pada tahun 2024. Kami berkomitmen untuk memberikan solusi belajar yang inovatif dan efektif bagi siswa di seluruh Indonesia. 
-            Dengan katalog materi pelajaran yang luas, mulai dari Matematika, Bahasa Indonesia, hingga sains, kami membantu siswa menguasai semua pelajaran dengan mudah.
+            Ruang Belajar adalah platform belajar online yang didirikan pada
+            tahun 2024. Kami berkomitmen untuk memberikan solusi belajar yang
+            inovatif dan efektif bagi siswa di seluruh Indonesia. Dengan katalog
+            materi pelajaran yang luas, mulai dari Matematika, Bahasa Indonesia,
+            hingga sains, kami membantu siswa menguasai semua pelajaran dengan
+            mudah.
           </p>
         </div>
       </div>
     </section>
 
-      <hr class="h-0.5 flex-grow bg-secondary/25 dark:bg-white/25" />
-        <h2 class="text-5xl font-bold text-white text-center">
-          Contact Us
-        </h2>
-        <hr class="h-0.5 flex-grow bg-secondary/25 dark:bg-white/25" />
+    <hr class="h-0.5 flex-grow bg-secondary/25 dark:bg-white/25" />
+    <h2 class="text-5xl font-bold text-white text-center">Contact Us</h2>
+    <hr class="h-0.5 flex-grow bg-secondary/25 dark:bg-white/25" />
 
     <!-- Contact Us Section -->
     <section class="md:w-[60%] mx-auto rounded-lg p-8 mt-8 py-[16px]">
@@ -436,19 +327,34 @@
           <form class="flex flex-col gap-4">
             <div>
               <label class="block text-gray-600 mb-2">Nama :</label>
-              <input type="text" placeholder="Masukkan nama Anda" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300">
+              <input
+                type="text"
+                placeholder="Masukkan nama Anda"
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300"
+              />
             </div>
             <div>
               <label class="block text-gray-600 mb-2">Email :</label>
-              <input type="email" placeholder="Masukkan email Anda" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300">
+              <input
+                type="email"
+                placeholder="Masukkan email Anda"
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300"
+              />
             </div>
             <div>
               <label class="block text-gray-600 mb-2">No. Telp :</label>
-              <input type="tel" placeholder="Masukkan nomor telepon Anda" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300">
+              <input
+                type="tel"
+                placeholder="Masukkan nomor telepon Anda"
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300"
+              />
             </div>
             <div>
               <label class="block text-gray-600 mb-2">Pesan :</label>
-              <textarea placeholder="Tulis pesan Anda di sini" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300"></textarea>
+              <textarea
+                placeholder="Tulis pesan Anda di sini"
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300"
+              ></textarea>
             </div>
             <button class="w-full bg-purple-500 text-white font-bold py-2 rounded-lg shadow hover:bg-purple-600">Kirim</button>
           </form>
@@ -456,7 +362,7 @@
       </div>
     </section>
 
-    <footer class="bg-white text-black py-4 ">
+    <footer class="bg-white text-black py-4">
       <div class="container mx-auto text-center text-sm">
         <div class="bg-gradient-to-br from-purple-100 to-blue-100 pb-4 pt-6 rounded-lg shadow items-center">
           <ul class="grid gap-4 md:grid-cols-5 sm:grid-cols-2 items-center grid-cols-1 text-center">

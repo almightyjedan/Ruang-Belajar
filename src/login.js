@@ -45,22 +45,20 @@ signupForm.addEventListener("submit", function (event) {
 });
 
 // Ambil elemen
-const switchToSignUp = document.getElementById('switchToSignUp');
-const switchToSignIn = document.getElementById('switchToSignIn');
-const titlesm = document.getElementById('titlesm');
+const switchToSignUp = document.getElementById("switchToSignUp");
+const switchToSignIn = document.getElementById("switchToSignIn");
+const titlesm = document.getElementById("titlesm");
 
 // Fungsi untuk beralih ke Sign Up
 
 function showSignUp() {
-  signupForm.classList.remove('sm:hidden');
-  document.getElementById('signinForm').style.display = 'none';
+  signupForm.classList.remove("sm:hidden");
+  document.getElementById("signinForm").style.display = "none";
   titlesm.textContent = "Welcome Back!";
 }
 
 function showSignIn() {
-  signupForm.classList.add('sm:hidden');
-  document.getElementById('signinForm').style.display = 'block';
+  signupForm.classList.add("sm:hidden");
+  document.getElementById("signinForm").style.display = "block";
   titlesm.textContent = "Hello, Friends!";
 }
-
-
