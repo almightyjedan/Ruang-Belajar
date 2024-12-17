@@ -58,17 +58,13 @@
         </div>
         <!-- Sign In & Burger Icon -->
         <div class="flex items-center gap-6">
-          <a
-            href="../../index.html"
-            class="bg-blue-900 text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
-            >Sign in</a
-          >
-          <ion-icon
-            id="burgerIcon"
-            onclick="burger()"
-            name="menu"
-            class="text-3xl cursor-pointer lg:hidden"
-          ></ion-icon>
+          <a onclick="user()" id="usericon" class="cursor-pointer hidden border-solid border-2 text-white p-1 rounded-full hover:bg-gray-500 text-xl flex items-center justify-center gap-2">
+          <ion-icon ion-icon name="person" class="text-2xl"></ion-icon></a>
+          <div id="dropUser" class="absolute hidden bg-white rounded-lg text-sm mt-2 top-12 right-7 shadow-2xl">
+            <a id="logoutbutton" href="../../login.html" class="hidden lg:block px-6 py-2 hover:text-gray-500">Log Out</a>
+          </div>
+          <a id="signinbutton" href="../../login.html" class="bg-[#577180] text-white px-5 py-2 rounded-full hover:bg-gray-500">Sign in</a>
+          <ion-icon id="burgerIcon" onclick="burger()" name="menu" class="text-3xl text-white cursor-pointer lg:hidden"></ion-icon>
         </div>
       </nav>
     </header>

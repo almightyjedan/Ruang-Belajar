@@ -23,7 +23,6 @@ function tingkat() {
   dropTingkat.classList.toggle("hidden");
 }
 
-// Menutup dropdown jika pengguna klik di luar elemen
 window.addEventListener("click", function (event) {
   const dropdown = document.getElementById("dropTingkat");
   const tingkatButton = document.querySelector('li[onclick="tingkat()"]');
@@ -32,7 +31,15 @@ window.addEventListener("click", function (event) {
   }
 });
 
-const loggedin = localStorage.getItem('loggedin');
+window.addEventListener("click", function (event) {
+  const dropdown = document.getElementById("dropUser");
+  const userButton = document.querySelector('a[onclick="user()"]');
+  if (!dropdown.contains(event.target) && !userButton.contains(event.target)) {
+    dropdown.classList.add("hidden");
+  }
+});
+
+const loggedin = sessionStorage.getItem('loggedin');
 
 if (loggedin === "1") { 
   signinbutton.classList.add("hidden");
@@ -45,4 +52,33 @@ if (loggedin === "1") {
 function user() {
   const dropUser = document.getElementById("dropUser");
   dropUser.classList.toggle("hidden"); 
+}
+
+document.getElementById("contact-form").addEventListener("submit", async function (event) {
+  event.preventDefault(); // Mencegah form melakukan submit default
+  const form = event.target;
+
+  try {
+    const response = await fetch("https://formspree.io/f/xnnqkzrk", {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      alert("Pesan Anda berhasil dikirim! Terima kasih.");
+      form.reset();
+    } else {
+      throw new Error("Form submission failed");
+    }
+  } catch (error) {
+    alert("Gagal mengirim pesan. Silakan coba lagi.");
+  }
+});
+
+function kirimWA() {
+  const phoneNumber = "+6281574749192";
+  const messageTemplate = "Halo, saya ingin bertanya tentang layanan Ruang Belajar.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(messageTemplate)}`;
+  window.open(whatsappUrl, "_blank"); 
 }
