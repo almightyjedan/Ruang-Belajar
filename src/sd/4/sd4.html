@@ -16,13 +16,13 @@
     <link rel="icon" href="../../assets/Ruang Belajar.png" />
   </head>
   <body
-    class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-full overscroll-auto"
+    class="font-[Poppins] bg-blue-900 text-white h-full overscroll-auto"
   >
-    <header class="bg-white fixed top-0 left-0 w-full z-50 shadow-md">
+    <header class="bg-[#a6c1ee] text-black font-bold fixed top-0 left-0 w-full z-50 shadow-md">
       <nav class="flex justify-between items-center w-[92%] mx-auto">
         <!-- Logo -->
         <div>
-          <a href="#home"><img class="w-16 cursor-pointer" src="/src/assets/Ruang Belajar.png" alt="Logo"></a>
+          <a href="../../dashboard.html"><img class="w-16 cursor-pointer" src="/src/assets/Ruang Belajar.png" alt="Logo"></a>
         </div>
         <!-- Menu Navigation -->
         <div
@@ -30,9 +30,9 @@
           class="hidden rounded-xl text-center lg:flex flex-col lg:flex-row gap-6 bg-white lg:bg-transparent p-5 lg:p-0 lg:static absolute top-14 right-3 w-[50%] md:w-[30%] lg:w-auto"
         >
           <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-8 gap-8">
-            <li><a onclick="burger()" class="hover:text-gray-500" href="#home">Home</a></li>
+            <li><a onclick="burger()" class="hover:text-gray-500" href="../../dashboard.html">Home</a></li>
             <li>
-              <a onclick="burger()" class="hover:text-gray-500" href="#testimoni">Testimoni</a>
+              <a onclick="burger()" class="hover:text-gray-500" href="../../dashboard.html#testimoni">Testimoni</a>
             </li>
             <div class="relative group flex justify-center">
               <li onclick="tingkat()" class="cursor-pointer flex justify-center">
@@ -45,22 +45,22 @@
                 id="dropTingkat"
                 class="absolute hidden bg-white rounded-lg text-sm mt-2 top-6 shadow-2xl"
               >
-              <a href="../../sd/4/sd4.html" class="block px-6 py-2 hover:text-gray-500">SD</a>
-              <a href="../../smp/1/smp1.html" class="block px-6 py-2 hover:text-gray-500">SMP</a>
-              <a href="../../sma/1/sma1.html" class="block px-6 py-2 hover:text-gray-500">SMA/SMK</a>
+                <a href="../../sd/1/sd1.html" class="block px-6 py-2 hover:text-gray-500">SD</a>
+                <a href="../../smp/1/smp1.html" class="block px-6 py-2 hover:text-gray-500">SMP</a>
+                <a href="../../sma/1/sma1.html" class="block px-6 py-2 hover:text-gray-500">SMA/SMK</a>
               </div>
             </div>
-            <li><a onclick="burger()" class="hover:text-gray-500" href="#aboutus">About Us</a></li>
+            <li><a onclick="burger()" class="hover:text-gray-500" href="../../dashboard.html#aboutus">About Us</a></li>
             <li>
-              <a onclick="burger()" class="hover:text-gray-500" href="#contactus">Contact Us</a>
+              <a onclick="burger()" class="hover:text-gray-500" href="../../dashboard.html#contactus">Contact Us</a>
             </li>
           </ul>
         </div>
         <!-- Sign In & Burger Icon -->
         <div class="flex items-center gap-6">
           <a
-            href="index.html"
-            class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
+            href="../../index.html"
+            class="bg-blue-900 text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
             >Sign in</a
           >
           <ion-icon
@@ -78,11 +78,11 @@
             <div class="text-center">
               <!-- Dropdown Menu -->
               <label for="kelas" class="block text-lg font-medium">Pilih Kelas:</label>
-              <select id="kelas" class="hover:text-gray-500 border border-gray-300 rounded-lg px-4 py-2 mt-2"  onchange="navigateToPage()">
+              <select id="kelas" class="hover:text-gray-500 text-black border border-gray-300 rounded-lg px-4 py-2 mt-2"  onchange="navigateToPage()">
                 <option value="1">Kelas 1 SD</option>
                 <option value="2">Kelas 2 SD</option>
                 <option value="3">Kelas 3 SD</option>
-                <option value="4" disabled selected>Kelas 4 SD</option>
+                <option value="4" disabled selected >Kelas 4 SD</option>
                 <option value="5">Kelas 5 SD</option>
                 <option value="6">Kelas 6 SD</option>
               </select>
@@ -90,14 +90,10 @@
         
             <h2 class="mt-6 text-center text-xl font-semibold">Hai, @Nama! Mau belajar apa hari ini?</h2>
         
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 text-black">
               <!-- Card Template -->
               <div onclick="goToPage('./mtk.html')" class="bg-white shadow-md rounded-lg p-4 text-center hover:scale-[1.03] active:scale-[1]">
-<<<<<<< HEAD
                 <div class=""><img class="w-full rounded-lg h-56 mb-4 object-cove" src="assets/mtk.jpg" alt=""> </div>
-=======
-                <div class="bg-gray-200 rounded-lg h-56 mb-4"></div>
->>>>>>> f41beaf96489ab7136bfae380daae60eb93b242f
                 <p class="font-medium">Matematika</p>
               </div>
               <div onclick="goToPage('./bahasa.html')" class="bg-white shadow-md rounded-lg p-4 text-center hover:scale-[1.03] active:scale-[1]">
@@ -138,19 +134,6 @@
             </div>
           </main>
         </section>
-        <footer class="bg-white text-black pb-2 pt-4 mt-10">
-            <div class="text-center ">
-              <a class="mx-2 text-lg hover:underline" href="../../dashboard.html">Home</a>
-              <a class="mx-2 text-lg hover:underline" href="../../dashboard.html#testimoni">Testimoni</a>
-              <a class="mx-2 text-lg hover:underline" href="#tingkat">Tingkat</a>
-              <a class="mx-2 text-lg hover:underline" href="../../dashboard.html#aboutus">About Us</a>
-              <a class="mx-2 text-lg hover:underline" href="../../dashboard.html#contactus">Contact Us</a>
-            </div>
-              <div class="container mx-auto text-center text-sm pt-2">
-              <p>&copy; 2024 Ruang Belajar. All rights reserved.</p>
-            </div>
-        </footer>
-    
         <script src="../../script.js"></script>
         <script src="../kelas.js"></script>
         </body>
