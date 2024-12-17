@@ -1,1 +1,138 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="../../output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <title>Ruang Belajar</title>
+  </head>
+  <body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-full overscroll-auto">
+    <!-- Header -->
+    <header class="bg-white fixed top-0 left-0 w-full z-50 shadow-md">
+      <nav class="flex justify-between items-center w-[92%] mx-auto">
+        <!-- Logo -->
+        <div>
+          <a href="../../dashboard.html"><img class="w-16 cursor-pointer" src="/src/assets/Ruang Belajar.png" alt="Logo"></a>
+        </div>
+        <!-- Menu Navigation -->
+        <div
+          id="navLinks"
+          class="hidden rounded-xl text-center lg:flex flex-col lg:flex-row gap-6 bg-white lg:bg-transparent p-5 lg:p-0 lg:static absolute top-14 right-3 w-[50%] md:w-[30%] lg:w-auto"
+        >
+          <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-8 gap-8">
+            <li><a onclick="burger()" class="hover:text-gray-500" href="../../dashboard.html">Home</a></li>
+            <li>
+              <a onclick="burger()" class="hover:text-gray-500" href="../../dashboard.html#testimoni">Testimoni</a>
+            </li>
+            <div class="relative group flex justify-center">
+              <li onclick="tingkat()" class="cursor-pointer flex justify-center">
+                <a class="flex items-center gap-1 hover:text-gray-500" href="#tingkat"
+                  >Tingkat
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </a>
+              </li>
+              <div
+                id="dropTingkat"
+                class="absolute hidden bg-white rounded-lg text-sm mt-2 top-6 shadow-2xl"
+              >
+                <a href="../../sd/1/sd1.html" class="block px-6 py-2 hover:text-gray-500">SD</a>
+                <a href="../../smp/1/smp1.html" class="block px-6 py-2 hover:text-gray-500">SMP</a>
+                <a href="../../sma/1/sma1.html" class="block px-6 py-2 hover:text-gray-500">SMA/SMK</a>
+              </div>
+            </div>
+            <li><a onclick="burger()" class="hover:text-gray-500" href="../../dashboard.html#aboutus">About Us</a></li>
+            <li>
+              <a onclick="burger()" class="hover:text-gray-500" href="../../dashboard.html#contactus">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Sign In & Burger Icon -->
+        <div class="flex items-center gap-6">
+          <a
+            href="../../index.html"
+            class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
+            >Sign in</a
+          >
+          <ion-icon
+            id="burgerIcon"
+            onclick="burger()"
+            name="menu"
+            class="text-3xl cursor-pointer lg:hidden"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="mt-20 px-4 md:px-10">
+      <div class="text-center mx-auto py-16">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10">Matematika SD/MI</h2>
+        <!-- Buttons -->
+        <div class="grid gap-6 grid-cols-1">
+          <button class="w-full bg-white text-gray-700 py-6 px-4 rounded-lg shadow hover:bg-gray-50 flex justify-between items-center">
+            <span class="text-left leading-relaxed break-words">
+              Perhitungan Dasar
+            </span>
+            <ion-icon class="w-8 object-contain" name="arrow-forward-outline"></ion-icon>
+          </button>
+          <button class="w-full bg-white text-gray-700 py-6 px-4 rounded-lg shadow hover:bg-gray-50 flex justify-between items-center">
+            <span class="text-left leading-relaxed break-words">
+              Sudut, Waktu, Panjang dan Berat
+            </span>
+            <ion-icon class="w-8 object-contain" name="arrow-forward-outline"></ion-icon>
+          </button>
+          <button class="w-full bg-white text-gray-700 py-6 px-4 rounded-lg shadow hover:bg-gray-50 flex justify-between items-center">
+            <span class="text-left leading-relaxed break-words">
+              Bangun Datar
+            </span>
+            <ion-icon class="w-8 object-contain" name="arrow-forward-outline"></ion-icon>
+          </button>
+          <button class="w-full bg-white text-gray-700 py-6 px-4 rounded-lg shadow hover:bg-gray-50 flex justify-between items-center">
+            <span class="text-left leading-relaxed break-words">
+              Mean, Median dan Modus
+            </span>
+            <ion-icon class="w-8 object-contain" name="arrow-forward-outline"></ion-icon>
+          </button>
+          <button class="w-full bg-white text-gray-700 py-6 px-4 rounded-lg shadow hover:bg-gray-50 flex justify-between items-center">
+            <span class="text-left leading-relaxed break-words">
+              Kelipatan dan Faktor bilangan
+            </span>
+            <ion-icon class="w-8 object-contain" name="arrow-forward-outline"></ion-icon>
+          </button>
+          <button class="w-full bg-white text-gray-700 py-6 px-4 rounded-lg shadow hover:bg-gray-50 flex justify-between items-center">
+            <span class="text-left leading-relaxed break-words">
+              Bilangan Bulat dan Cacah
+            </span>
+            <ion-icon class="w-8 object-contain" name="arrow-forward-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-black pb-2 pt-4 mt-10">
+      <div class="text-center">
+        <a class="mx-2 text-lg hover:underline" href="../../dashboard.html">Home</a>
+        <a class="mx-2 text-lg hover:underline" href="../../dashboard.html#testimoni">Testimoni</a>
+        <a class="mx-2 text-lg hover:underline" href="#tingkat">Tingkat</a>
+        <a class="mx-2 text-lg hover:underline" href="../../dashboard.html#aboutus">About Us</a>
+        <a class="mx-2 text-lg hover:underline" href="../../dashboard.html#contactus">Contact Us</a>
+      </div>
+      <div class="container mx-auto text-center text-sm pt-2">
+        <p>&copy; 2024 Ruang Belajar. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../../script.js"></script>
+    <script src="../kelas.js"></script>
+  </body>
+</html>
+=======
 MTK 5
+>>>>>>> f41beaf96489ab7136bfae380daae60eb93b242f
