@@ -59,8 +59,8 @@ document.getElementById("signinForm").addEventListener("submit", async (e) => {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     alert(`Login berhasil! Selamat datang, ${userCredential.user.email}`);
-    window.location.href = "dashboard.html";
-    localStorage.setItem('loggedin', 1);
+    window.location.href = "index.html";
+    sessionStorage.setItem('loggedin', 1);
   } catch (error) {
     const friendlyMessage = getFriendlyErrorMessage(error.code);
     alert(friendlyMessage);
@@ -76,8 +76,8 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     alert(`Pendaftaran berhasil! Selamat datang, ${userCredential.user.email}`);
-    window.location.href = "dashboard.html";
-    localStorage.setItem('loggedin', 1);
+    window.location.href = "index.html";
+    sessionStorage.setItem('loggedin', 1);
   } catch (error) {
     const friendlyMessage = getFriendlyErrorMessage(error.code);
     alert(friendlyMessage);
@@ -91,8 +91,8 @@ document.querySelectorAll(".fa-google-plus-g").forEach(button => {
       const result = await signInWithPopup(auth, googleProvider);
       const user = result.user;
       alert(`Login dengan Google berhasil! Selamat datang, ${user.displayName}`);
-      window.location.href = "dashboard.html";
-      localStorage.setItem('loggedin', 1);
+      window.location.href = "index.html";
+      sessionStorage.setItem('loggedin', 1);
     } catch (error) {
       const friendlyMessage = getFriendlyErrorMessage(error.code);
       alert(friendlyMessage);
@@ -107,7 +107,7 @@ document.querySelectorAll(".fa-github").forEach(button => {
         const result = await signInWithPopup(auth, githubProvider);
         const user = result.user;
         alert(`Login dengan GitHub berhasil! Selamat datang, ${user.displayName || user.email}`);
-        localStorage.setItem('loggedin', 1);
+        sessionStorage.setItem('loggedin', 1);
       } catch (error) {
         const friendlyMessage = getFriendlyErrorMessage(error.code);
         alert(friendlyMessage);

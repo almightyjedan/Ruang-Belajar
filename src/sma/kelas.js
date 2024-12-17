@@ -1,3 +1,13 @@
+if (loggedin === "1") { 
+  signinbutton.classList.add("hidden");
+  usericon.classList.remove("hidden");
+} else {
+ alert("Anda belum login, silahkan login terlebih dahulu!")
+//   window.location.href = "../../login.html"
+  signinbutton.classList.remove("hidden");
+  usericon.classList.add("hidden");
+}
+
 function navigateToPage() {
     const kelas = document.getElementById("kelas").value;
 
