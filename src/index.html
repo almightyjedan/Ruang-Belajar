@@ -12,7 +12,6 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <title>Ruang Belajar</title>
     <link rel="icon" href="/src/assets/Ruang Belajar.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-[Poppins] bg-[#577180] text-white h-full overscroll-auto">
     <header class="bg-[#142229] text-black font-bold fixed top-0 left-0 w-full z-50 shadow-md">
@@ -47,15 +46,16 @@
               <a onclick="burger()" class="hover:text-gray-500" href="#contactus">Contact Us</a>
             </li>
             <li>
-              <a onclick="burger()" class="lg:hidden" href="login.html">Log Out</a>
+              <a id="logoutbuttonburger" onclick="burger()" class="lg:hidden" href="login.html">Log Out</a>
             </li>
           </ul>
         </div>
         <!-- Sign In & Burger Icon -->
         <div class="flex items-center gap-6">
-          <a onclick="user()" id="usericon" class="cursor-pointer hidden border-solid border-2 text-white p-1 rounded-full hover:bg-gray-500 text-xl flex items-center justify-center gap-2">
-          <ion-icon ion-icon name="person" class="text-2xl"></ion-icon></a>
-          <div id="dropUser" class="absolute hidden bg-white rounded-lg text-sm mt-2 top-12 right-7 shadow-2xl">
+          <img onclick="user()" id="usericon" class="cursor-pointer hidden border-solid border-2 rounded-full w-10 object-contain">
+        </img>
+          <div id="dropUser" class="absolute flex flex-col items-center hidden bg-white rounded-lg text-sm mt-2 top-12 right-7 shadow-2xl">
+            <a href="#usersetting" id="username" class="px-6 py-2 hover:text-gray-500"></a>
             <a id="logoutbutton" href="login.html" class="hidden lg:block px-6 py-2 hover:text-gray-500">Log Out</a>
           </div>
           <a id="signinbutton" href="login.html" class="bg-[#577180] text-white px-5 py-2 rounded-full hover:bg-gray-500">Sign in</a>
@@ -178,7 +178,7 @@
         <div class="text-black logo flex shrink-0 gap-[3rem] p-[1rem] [animation:_inifite-scroll_110s_linear_infinite;] lg:[animation:_inifite-scroll_60s_linear_infinite;]">
           <div class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary">
             <div class="flex h-20 w-full items-center space-x-5">
-              <img alt="Muhammad Zaidan Ahbab" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/testimoni/WhatsApp Image 2024-01-10 at 11.03.28_cda473ca.png"/>
+              <img alt="Muhammad Zaidan Ahbab" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/testimoni/zaidan.jpg"/>
               <div class="flex h-full flex-col items-start justify-start space-y-1">
                 <span class="text-md text-left font-semibold md:text-lg">Muhammad Zaidan Ahbab</span>
                 <span class="md:text-md line-clamp-2 text-left text-sm">
@@ -262,7 +262,7 @@
 
           <div class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary">
             <div class="flex h-20 w-full items-center space-x-5">
-              <img alt="Irmawati Pakpahan" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/metal.png"/>
+              <img alt="Irmawati Pakpahan" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/testimoni/irma.jpg"/>
               <div class="flex h-full flex-col items-start justify-start space-y-1">
                 <span class="text-md text-left font-semibold md:text-lg">Irmawati Pakpahan</span>
                 <span class="md:text-md line-clamp-2 text-left text-sm">

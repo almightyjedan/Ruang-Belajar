@@ -6,10 +6,11 @@ import {
   createUserWithEmailAndPassword, 
   GoogleAuthProvider, 
   signInWithPopup,
-  GithubAuthProvider
+  GithubAuthProvider,
+  updateProfile
 } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 
-// Konfigurasi Firebase
+// Config Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyB9E9ko6jd4pDRhwW8pPoJmD9m9hmtj4Lg",
   authDomain: "login-ruang-belajar-dd354.firebaseapp.com",
@@ -26,7 +27,7 @@ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 
-// Fungsi untuk menampilkan pesan error yang ramah pengguna
+// Custom Alert
 function getFriendlyErrorMessage(errorCode) {
     switch (errorCode) {
         case "auth/missing-password":
@@ -45,12 +46,14 @@ function getFriendlyErrorMessage(errorCode) {
             return "Password terlalu lemah. Gunakan minimal 6 karakter.";
         case "auth/too-many-requests":
             return "Terlalu banyak percobaan login. Silakan coba lagi nanti.";
+        case "auth/account-exists-with-different-credential":
+            return "Akun sudah terdaftar, coba login dengan metode lain."
         default:
             return "Terjadi kesalahan. Silakan coba lagi.";
     }
   }
 
-// Event Listener untuk Login
+// Login
 document.getElementById("signinForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const email = document.getElementById("email2").value;
@@ -58,16 +61,21 @@ document.getElementById("signinForm").addEventListener("submit", async (e) => {
 
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    const profilePicture = user.photoURL || "./assets/usericon.png";
+
     alert(`Login berhasil! Selamat datang, ${userCredential.user.email}`);
-    window.location.href = "index.html";
     sessionStorage.setItem('loggedin', 1);
+    sessionStorage.setItem('username', userCredential.user.email);
+    sessionStorage.setItem('usericon', profilePicture);
+    window.location.href = "index.html";
   } catch (error) {
     const friendlyMessage = getFriendlyErrorMessage(error.code);
     alert(friendlyMessage);
   }
 });
 
-// Event Listener untuk Sign Up
+// Sign Up
 document.getElementById("signupForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value;
@@ -75,24 +83,33 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
 
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    const profilePicture = user.photoURL || "./assets/usericon.png";
+
     alert(`Pendaftaran berhasil! Selamat datang, ${userCredential.user.email}`);
-    window.location.href = "index.html";
     sessionStorage.setItem('loggedin', 1);
+    sessionStorage.setItem('username', userCredential.user.email);
+    sessionStorage.setItem('usericon', profilePicture);
+    window.location.href = "index.html";
   } catch (error) {
     const friendlyMessage = getFriendlyErrorMessage(error.code);
     alert(friendlyMessage);
   }
 });
 
-// Event Listener untuk Login dengan Google
+// Login Google
 document.querySelectorAll(".fa-google-plus-g").forEach(button => {
   button.addEventListener("click", async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
       const user = result.user;
+      const profilePicture = user.photoURL || "./assets/usericon.png";
+
       alert(`Login dengan Google berhasil! Selamat datang, ${user.displayName}`);
-      window.location.href = "index.html";
       sessionStorage.setItem('loggedin', 1);
+      sessionStorage.setItem('username', user.displayName);
+      sessionStorage.setItem('usericon', profilePicture);
+      window.location.href = "index.html";
     } catch (error) {
       const friendlyMessage = getFriendlyErrorMessage(error.code);
       alert(friendlyMessage);
@@ -100,14 +117,19 @@ document.querySelectorAll(".fa-google-plus-g").forEach(button => {
   });
 });
 
-// Event Listener untuk Login dengan GitHub
+// Login GitHub
 document.querySelectorAll(".fa-github").forEach(button => {
     button.addEventListener("click", async () => {
       try {
         const result = await signInWithPopup(auth, githubProvider);
         const user = result.user;
+        const profilePicture = user.photoURL || "./assets/usericon.png";
+
         alert(`Login dengan GitHub berhasil! Selamat datang, ${user.displayName || user.email}`);
         sessionStorage.setItem('loggedin', 1);
+        sessionStorage.setItem('username', user.displayName);
+        sessionStorage.setItem('usericon', profilePicture);
+        window.location.href = "index.html";
       } catch (error) {
         const friendlyMessage = getFriendlyErrorMessage(error.code);
         alert(friendlyMessage);
