@@ -29,3 +29,37 @@ function navigateToPage() {
 function goToPage(page) {
       window.location.href = page;
 }
+
+// Username dan Profile dinamis sesuai dengan email
+document.addEventListener('DOMContentLoaded', () => {
+  const usernamedinamis = document.getElementById('username');
+  const usernamewelcome = document.getElementById('usernamewelcome')
+  const profile = document.getElementById('usericon');
+  const username = sessionStorage.getItem('username');
+  const pfpicon = sessionStorage.getItem('usericon');
+
+  if (username) {
+      usernamedinamis.textContent = `${username}!`;
+      usernamewelcome.textContent = `Hai, ${username}!`;
+  }
+
+  if (pfpicon) {
+    profile.src = pfpicon;
+  }
+});
+
+  // Pop Up Video Materi
+  function openpopup(videoUrl) {
+    const modal = document.getElementById('video');
+    const popup = document.getElementById('popup');
+    modal.classList.remove('hidden');
+    popup.src = videoUrl; // Set the YouTube video URL
+  }
+
+  // Close Pop up Video Materi
+  function closepopup() {
+    const modal = document.getElementById('video');
+    const popup = document.getElementById('popup');
+    modal.classList.add('hidden');
+    popup.src = ''; // Clear the video URL to stop playback
+  }

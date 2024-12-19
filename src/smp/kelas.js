@@ -23,3 +23,21 @@ function navigateToPage() {
 function goToPage(page) {
       window.location.href = page;
 }
+
+// Username dan Profile dinamis sesuai dengan email
+document.addEventListener('DOMContentLoaded', () => {
+  const usernamedinamis = document.getElementById('username');
+  const usernamewelcome = document.getElementById('usernamewelcome')
+  const profile = document.getElementById('usericon');
+  const username = sessionStorage.getItem('username');
+  const pfpicon = sessionStorage.getItem('usericon');
+
+  if (username) {
+      usernamedinamis.textContent = `${username}!`;
+      usernamewelcome.textContent = `Hai, ${username}!`;
+  }
+
+  if (pfpicon) {
+    profile.src = pfpicon;
+  }
+});
