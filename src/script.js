@@ -1,4 +1,4 @@
-// Fungsi untuk toggle menu burger
+// Menampilkan menu burger ketika tampilan tablet atau lebih kecil
 function burger() {
   const burgerIcon = document.getElementById("burgerIcon");
   const burgerOpen = burgerIcon.name === "menu";  
@@ -6,7 +6,7 @@ function burger() {
   navLinks.classList.toggle("hidden");
 }
 
-// Menutup menu jika klik di luar area burger atau menu
+// Klik di luar menu burger untuk tutup menu burger
 document.addEventListener("click", (event) => {
   const clikMenu = navLinks.contains(event.target);
   const clickBurger = burgerIcon.contains(event.target);
@@ -17,12 +17,13 @@ document.addEventListener("click", (event) => {
   }
 });
 
-// Dropdown menu "Tingkat"
+// Dropdown tingkat
 function tingkat() {
   const dropTingkat = document.getElementById("dropTingkat");
   dropTingkat.classList.toggle("hidden");
 }
 
+// Klik di luar dropdown tingkat untuk tutup dropdown tingkat
 window.addEventListener("click", function (event) {
   const dropdown = document.getElementById("dropTingkat");
   const tingkatButton = document.querySelector('li[onclick="tingkat()"]');
@@ -31,31 +32,44 @@ window.addEventListener("click", function (event) {
   }
 });
 
+// Dropdown user
+function user() {
+  const dropUser = document.getElementById("dropUser");
+  dropUser.classList.toggle("hidden"); 
+}
+
+// Klik di luar dropdown user untuk tutup dropdown user
 window.addEventListener("click", function (event) {
   const dropdown = document.getElementById("dropUser");
-  const userButton = document.querySelector('a[onclick="user()"]');
+  const userButton = document.querySelector('img[onclick="user()"]');
   if (!dropdown.contains(event.target) && !userButton.contains(event.target)) {
     dropdown.classList.add("hidden");
   }
 });
 
+// Cek apakah sudah login atau belum dan function log out
 const loggedin = sessionStorage.getItem('loggedin');
-
+const logoutbuttonburger = document.getElementById('logoutbuttonburger')
+const logoutbutton = document.getElementById('logoutbutton')
 if (loggedin === "1") { 
   signinbutton.classList.add("hidden");
   usericon.classList.remove("hidden");
 } else {
   signinbutton.classList.remove("hidden");
   usericon.classList.add("hidden");
+  logoutbuttonburger.textContent = "Sign In";
 }
+window.addEventListener("click", (event) => {
+  if (event.target === logoutbuttonburger || event.target === logoutbutton) {
+    sessionStorage.setItem('loggedin', 0);
+    sessionStorage.setItem('username', 0);
+    sessionStorage.setItem('usericon', 0);
+  }
+});
 
-function user() {
-  const dropUser = document.getElementById("dropUser");
-  dropUser.classList.toggle("hidden"); 
-}
-
+// API kirim Email
 document.getElementById("contact-form").addEventListener("submit", async function (event) {
-  event.preventDefault(); // Mencegah form melakukan submit default
+  event.preventDefault();
   const form = event.target;
 
   try {
@@ -76,9 +90,26 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   }
 });
 
+// API kirim WhatsApp
 function kirimWA() {
-  const phoneNumber = "+6281574749192";
-  const messageTemplate = "Halo, saya ingin bertanya tentang layanan Ruang Belajar.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(messageTemplate)}`;
-  window.open(whatsappUrl, "_blank"); 
+  const notel = "+6281574749192";
+  const template = "Halo, saya ingin bertanya tentang layanan Ruang Belajar.";
+  const script = `https://wa.me/${notel}?text=${encodeURIComponent(template)}`;
+  window.open(script, "_blank"); 
 }
+
+// Username dan Profile dinamis sesuai dengan email
+document.addEventListener('DOMContentLoaded', () => {
+  const usernamedinamis = document.getElementById('username');
+  const profile = document.getElementById('usericon');
+  const username = sessionStorage.getItem('username');
+  const pfpicon = sessionStorage.getItem('usericon');
+
+  if (username) {
+      usernamedinamis.textContent = `${username}`;
+  }
+
+  if (pfpicon) {
+    profile.src = pfpicon;
+  }
+});
