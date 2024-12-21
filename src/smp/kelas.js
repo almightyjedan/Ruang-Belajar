@@ -3,7 +3,7 @@ if (loggedin === "1") {
   usericon.classList.remove("hidden");
 } else {
  alert("Anda belum login, silahkan login terlebih dahulu!")
-//   window.location.href = "../../login.html"
+  window.location.href = "../../login.html"
   signinbutton.classList.remove("hidden");
   usericon.classList.add("hidden");
 }

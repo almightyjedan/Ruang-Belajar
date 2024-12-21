@@ -3,7 +3,7 @@ if (loggedin === "1") {
   usericon.classList.remove("hidden");
 } else {
  alert("Anda belum login, silahkan login terlebih dahulu!")
-//   window.location.href = "../../login.html"
+  window.location.href = "../../login.html"
   signinbutton.classList.remove("hidden");
   usericon.classList.add("hidden");
 }
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('video');
     const popup = document.getElementById('popup');
     modal.classList.remove('hidden');
-    popup.src = videoUrl; // Set the YouTube video URL
+    popup.src = videoUrl;
   }
 
   // Close Pop up Video Materi
@@ -61,5 +61,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('video');
     const popup = document.getElementById('popup');
     modal.classList.add('hidden');
-    popup.src = ''; // Clear the video URL to stop playback
+    popup.src = '';
   }

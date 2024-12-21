@@ -50,8 +50,8 @@
           <img onclick="user()" id="usericon" class="cursor-pointer hidden border-solid border-2 rounded-full w-10 object-contain">
         </img>
           <div id="dropUser" class="absolute flex flex-col items-center hidden bg-white rounded-lg text-sm mt-2 top-12 right-7 shadow-2xl">
-            <a href="#usersetting" id="username" class="px-6 py-2 hover:text-gray-500"></a>
-            <a id="logoutbutton" href="login.html" class="hidden lg:block px-6 py-2 hover:text-gray-500">Log Out</a>
+            <a href="#usersetting" id="username" class="px-6 py-2 lg:text-base xl:text-lg hover:text-gray-500"></a>
+            <a id="logoutbutton" href="login.html" class="hidden lg:text-base xl:text-lg lg:block px-6 py-2 hover:text-gray-500">Log Out</a>
           </div>
           <a id="signinbutton" href="login.html" class="bg-[#577180] text-white px-5 py-2 rounded-full hover:bg-gray-500">Sign in</a>
           <ion-icon id="burgerIcon" onclick="burger()" name="menu" class="text-3xl text-white cursor-pointer lg:hidden"></ion-icon>
@@ -61,58 +61,59 @@
     <!-- Home -->
     <section class="text-center max-w-6xl mx-auto z-[-1] w-full py-[16px] px-6 md:px-[48px]" id="home">
       <div>
-        <h2 class="text-6xl font-bold text-center my-20">
+        <h2 class="text-3xl md:text-4xl lg:text-6xl font-bold text-center mb-10 md:mb-15 lg:mb-20 mt-24">
           Apa itu Ruang Belajar?
         </h2>
-        <p class="lg:leading-9 text-lg lg:text-xl mb-10">
+        <p class="lg:leading-9 text-sm md:text-md lg:text-xl mb-10">
           Ruang Belajar adalah platform pembelajaran online yang dirancang untuk
           membantu siswa dan pengajar dalam proses belajar mengajar. Dengan
           berbagai materi pelajaran yang terstruktur dan mudah diakses, Ruang
           Belajar memberikan kemudahan bagi pengguna untuk belajar kapan saja
           dan di mana saja.
         </p>
-        <div class="flex items-center justify-center">
-          <ul>
-            <li class="flex items-center mb-3">
-              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span>Memudahkan akses ke materi pelajaran.</span>
+        <div class="flex items-center justify-center p-4">
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-2"></ion-icon>
+              <span class="text-sm md:text-base">Memudahkan akses ke materi pelajaran.</span>
             </li>
-            <li class="flex items-center mb-3">
-              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span>Mendorong pembelajaran mandiri dan pengembangan diri.</span>
+            <li class="flex items-start">
+              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-2"></ion-icon>
+              <span class="text-sm md:text-base">Mendorong pembelajaran mandiri dan pengembangan diri.</span>
             </li>
-            <li class="flex items-center mb-3">
-              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span>Menyediakan metode pembelajaran yang sesuai dengan gaya belajar.</span>
+            <li class="flex items-start">
+              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-2"></ion-icon>
+              <span class="text-sm md:text-base">Menyediakan metode pembelajaran yang sesuai dengan gaya belajar.</span>
             </li>
-            <li class="flex items-center mb-3">
-              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span>Fleksibilitas waktu dan lokasi.</span>
+            <li class="flex items-start">
+              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-2"></ion-icon>
+              <span class="text-sm md:text-base">Fleksibilitas waktu dan lokasi.</span>
             </li>
-            <li class="flex items-center mb-3">
-              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-1"></ion-icon>
-              <span>Interaksi melalui forum diskusi dan sesi tanya jawab.</span>
+            <li class="flex items-start">
+              <ion-icon name="checkmark-outline" class="text-green-500 text-2xl mr-2"></ion-icon>
+              <span class="text-sm md:text-base">Interaksi melalui forum diskusi dan sesi tanya jawab.</span>
             </li>
           </ul>
         </div>
+        
       </div>
     </section>
     <div class="w-[90%] lg:w-[75%] flex flex-col justify-center mx-auto mt-[100px]">
       <section class="brand-section p-8 bg-white text-black bg-opacity-[40%] mb-10 rounded-[15px]">
-        <h2 class="text-white text-5xl font-bold text-center mt-10 mb-16">
+        <h2 class="text-white text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center mt-10 mb-16">
           Kenapa sih harus Ruang Belajar?
         </h2>
-        <div class="brand-grid grid grid-cols-1 lg:grid-cols-3 gap-[16px]">
+        <div class="brand-grid grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[16px]">
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
             <a><img src="assets/human-2099157_1920.png" class="w-full max-h-[120px] object-contain"/></a>
-            <h3 class="text-2xl uppercase mt-10 mb-5">Ngerti sampe akar</h3>
-            <p>Belajar buat paham konsep sampe kebayang banget...</p>
+            <h3 class="text-lg md:text-xl lg:text-2xl uppercase mt-5 lg:mt-10 mb-2 lg:mb-5">Ngerti sampe akar</h3>
+            <p class="text-sm md:text-base">Belajar buat paham konsep sampe kebayang banget...</p>
           </div>
 
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
             <a><img src="assets/archery-8564584_1920.png" class="w-full max-h-[120px] object-contain"/></a>
-            <h3 class="text-2xl uppercase mt-10 mb-5">to the point</h3>
-            <p>
+            <h3 class="text-lg md:text-xl lg:text-2xl uppercase mt-5 lg:mt-10 mb-2 lg:mb-5">to the point</h3>
+            <p class="text-sm md:text-base">
               Ga ada lagi cerita belajar di kelas planga-plongo ketinggalan
               materi. Kalo perlu waktu untuk menyerap materi, tinggal pause atau
               ulang. Bahkan abis ngerjain soal bisa review materi lagi!
@@ -120,8 +121,8 @@
           </div>
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
             <a><img src="assets/metal.png" class="w-full max-h-[120px] object-contain"/></a>
-            <h3 class="text-2xl uppercase mt-10 mb-5">gaul abis!</h3>
-            <p>
+            <h3 class="text-lg md:text-xl lg:text-2xl uppercase mt-5 lg:mt-10 mb-2 lg:mb-5">gaul abis!</h3>
+            <p class="text-sm md:text-base">
               Tutor2 Ruang Belajar friendly dan seneng ngajar, jadinya seru
               abis, ga bikin ngantuk. Kadang2 pada sampe lupa kalo lagi belajar
               :p
@@ -129,18 +130,18 @@
           </div>
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
             <a><img src="assets/chronometer-152905_1920.png" class="w-full max-h-[120px] object-contain"/></a>
-            <h3 class="text-2xl uppercase mt-10 mb-5">
+            <h3 class="text-lg md:text-xl lg:text-2xl uppercase mt-5 lg:mt-10 mb-2 lg:mb-5">
               any time u want, any time u need
             </h3>
-            <p>
+            <p class="text-sm md:text-base">
               Jelas lah, kalo pengen belajar atau lagi kepepet tinggal buka
               Ruang Belajar! Tonton deh sampe kenyang.
             </p>
           </div>
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
             <a><img src="assets/light-bulb-8611062_1920.png" class="w-full max-h-[120px] object-contain"/></a>
-            <h3 class="text-2xl uppercase mt-10 mb-5">mind blowing!</h3>
-            <p>
+            <h3 class="text-lg md:text-xl lg:text-2xl uppercase mt-5 lg:mt-10 mb-2 lg:mb-5">mind blowing!</h3>
+            <p class="text-sm md:text-base">
               Ruang Belajar ga cuma pengen kalian lolos ujian atau nilai bagus
               doang, tapi juga pengen kalian cerdas beneran buat bekal di masa
               depan.
@@ -148,12 +149,12 @@
           </div>
           <div class="brand-item bg-white p-[16px] rounded-[8px] text-center">
             <a><img src="assets/pedal.png" class="w-full max-h-[120px] object-contain"/></a>
-            <h3 id="testimoni" class="text-2xl uppercase mt-10 mb-5">
+            <h3 id="testimoni" class="text-lg md:text-xl lg:text-2xl uppercase mt-5 lg:mt-10 mb-2 lg:mb-5">
               gas polll!!
             </h3>
-            <p>
+            <p class="text-sm md:text-base">
               Mau belajar atau les di mana aja bebas, tapi belajar sendiri buat
-              sampe bikin jago ya sama zenius, iya gak??
+              sampe bikin jago ya sama Ruang Belajar, iya gak??
             </p>
           </div>
         </div>
@@ -162,7 +163,7 @@
 
     <div class="flex justify-center items-center my-10 gap-6 py-[16px] md:px-[48px]">
       <hr class="h-0.5 flex-grow bg-secondary/25 dark:bg-white/25" />
-      <h2 class="text-5xl font-bold text-white text-center">
+      <h2 class="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white text-center">
         Emang sebagus apa Ruang Belajar?
       </h2>
       <hr class="h-0.5 flex-grow bg-secondary/25 dark:bg-white/25" />
@@ -170,7 +171,7 @@
 
     <section>
       <div class="logo-container mb-10 overflow-hidden flex">
-        <div class="text-black logo flex shrink-0 gap-[3rem] p-[1rem] [animation:_inifite-scroll_110s_linear_infinite;] lg:[animation:_inifite-scroll_60s_linear_infinite;]">
+        <div class="text-black logo flex shrink-0 gap-[3rem] p-[1rem] [animation:_inifite-scroll_90s_linear_infinite;] lg:[animation:_inifite-scroll_60s_linear_infinite;]">
           <div class="flex w-[420px] flex-col items-start space-y-5 rounded-xl border bg-white p-6 shadow-md dark:bg-secondary">
             <div class="flex h-20 w-full items-center space-x-5">
               <img alt="Muhammad Zaidan Ahbab" class="size-[72px] flex-shrink-0 rounded-full border object-cover" src="assets/testimoni/zaidan.jpg"/>
@@ -320,40 +321,40 @@
     </section>
 
     <hr class="h-0.5 flex-grow" />
-    <h2 class="text-5xl font-bold text-white text-center">Contact Us</h2>
+    <h2 class="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white text-center">Contact Us</h2>
     <hr class="h-0.5 flex-grow" />
 
     <!-- Contact Us Section -->
-    <section class=" md:w-[80%] lg:w-[60%] mx-auto rounded-lg p-8 mt-8 py-[16px]">
+    <section class="md:w-[80%] lg:w-[60%] mx-auto rounded-lg p-8 mt-8 py-[16px]">
       <div>
         <form id="contact-form" class="flex flex-col gap-4">
           <div>
-            <label class="block mb-2">Nama :</label>
+            <label class="text-sm sm:text-base block mb-2">Nama :</label>
             <input
               type="text"
               name="nama"
               placeholder="Masukkan nama Anda"
               required
-              class="text-black w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              class="text-black w-full border border-gray-300 rounded px-4 py-1 md:py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
             />
           </div>
           <div>
-            <label class="block mb-2">Email :</label>
+            <label class="text-sm sm:text-base block mb-2">Email :</label>
             <input
               type="email"
               name="email"
               placeholder="Masukkan email Anda"
               required
-              class="text-black w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              class="text-black w-full border border-gray-300 rounded px-4 py-1 md:py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
             />
           </div>
           <div>
-            <label class="block mb-2">Pesan :</label>
+            <label class="text-sm sm:text-base block mb-2">Pesan :</label>
             <textarea
               name="pesan"
               placeholder="Tulis pesan Anda di sini"
               required
-              class="text-black w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              class="text-black w-full border border-gray-300 rounded px-4 py-1 md:py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
             ></textarea>
           </div>
           <button
