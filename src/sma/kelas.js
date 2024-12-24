@@ -41,3 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
     profile.src = pfpicon;
   }
 });
+ // Pop Up Video Materi
+ function openpopup(videoUrl) {
+  const modal = document.getElementById('video');
+  const popup = document.getElementById('popup');
+  modal.classList.remove('hidden');
+  popup.src = videoUrl;
+}
+
+// Close Pop up Video Materi
+function closepopup() {
+  const modal = document.getElementById('video');
+  const popup = document.getElementById('popup');
+  modal.classList.add('hidden');
+  popup.src = '';
+}
